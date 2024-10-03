@@ -21,33 +21,43 @@ export default function Footer() {
                 />
                 <p className="pb-7">
                     Expertly trained, battle-tested,
-                    <br/>elite software developers on <br/>demand
+                    <br />elite software developers on <br />demand
                 </p>
                 <div className="flex gap-4 items-end pb-7">
-                    <IoMdCall fontSize={30}/>
+                    <IoMdCall fontSize={30} />
                     <p>+94 713249222</p>
                 </div>
 
                 <div className="flex gap-4 items-end pb-7">
-                    <MdOutlineEmail fontSize={25}/>
+                    <MdOutlineEmail fontSize={25} />
                     <p>hello@courtney.lk</p>
                 </div>
 
                 <div className="flex gap-4 items-center pb-7">
-                    <IoLocationOutline fontSize={30}/>
+                    <IoLocationOutline fontSize={30} />
                     <p>
-                        Courtney Lanka (Private) Limited <br/>
-                        Level 35 <br/>World Trade Center <br/>Colombo 01
+                        Courtney Lanka (Private) Limited <br />
+                        Level 35 <br />World Trade Center <br />Colombo 01
                     </p>
                 </div>
 
-                <h3 className="pb-3">FOLLOW US</h3>
-                <div className="flex gap-4">
-                    <CiLinkedin fontSize={35}/>
-                    <CiFacebook fontSize={35}/>
-                    <FaInstagram fontSize={35}/>
-                    <LiaTwitterSquare fontSize={35}/>
-                    <CgYoutube fontSize={35}/>
+                <h3 className="pb-4">FOLLOW US</h3>
+                <div className="flex gap-3 pt-3">
+                    <Link href="/">
+                        <CiLinkedin fontSize={35} />
+                    </Link>
+                    <Link href="/">
+                        <CiFacebook fontSize={35} />
+                    </Link>
+                    <Link href="/">
+                        <FaInstagram fontSize={35} />
+                    </Link>
+                    <Link href="/">
+                        <LiaTwitterSquare fontSize={35} />
+                    </Link>
+                    <Link href="/">
+                        <CgYoutube fontSize={35} />
+                    </Link>
                 </div>
             </div>
 
