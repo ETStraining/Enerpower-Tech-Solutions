@@ -1,0 +1,72 @@
+/* styles/Mission.module.css */
+.container {
+   
+    margin: 0 auto;
+    padding: 10%  ;
+    background-color: #1E1E1E;
+   
+   
+  }
+  
+  .title {
+    font-size: 2rem;
+    color: #f8f4f4;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    text-align: center;
+    
+  }
+  .titles {
+    font-size: 2rem;
+    color: #f8f4f4;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 10%;
+    letter-spacing: 2px;      
+  word-spacing: 10px; 
+    
+  }
+  
+  .description {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #E5E5E5;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  .descriptions{
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #E5E5E5;
+    margin-bottom: 2rem;
+    text-align: center;
+    padding-left: 22%;
+    padding-right: 22%;
+  }
+  .servicescontainer
+  {
+    display: flex;
+    margin-top: 10%;
+   justify-content:space-between ;
+    
+  }
+  .servicetitle{
+    color: #E5E5E5;
+    font-weight: 700;
+  }
+  .servicepp{
+    color: #E5E5E5;
+    color: #E5E5E5;
+    font-weight: 400;
+    margin-top: 4%;
+   
+  }
+  .p{
+    color: #E5E5E5;
+    color: #E5E5E5;
+    font-weight: 400; 
+  }
+  .image{
+    margin-left: 20%;
+  }
