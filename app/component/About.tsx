@@ -51,7 +51,7 @@ export default function About() {
               <p className="font-bold">02 WE PROCEED</p>
             </div>
             <div>
-              <img src="/group (1).png" alt="Negotiate" className="mx-auto mb-2" />
+              <img src="/handshake 4.png" alt="Negotiate" className="mx-auto mb-2" />
               <p className="font-bold">03 NEGOTIATE</p>
             </div>
             <div>
