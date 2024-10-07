@@ -1,11 +1,10 @@
-import Image from "next/image";
-import Navbar from "./component/navigation";
+
+import Main from "./component/mainp";
 export default function Home() {
   return (
     <div >
-      <Navbar/>
+      <Main/>
     </div>
   );
 };
 
-export default HomePage;
