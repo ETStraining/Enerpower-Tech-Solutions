@@ -1,3 +1,4 @@
+
 import { redirect } from 'next/navigation';
 
 const Home = () => {
@@ -5,3 +6,4 @@ const Home = () => {
 };
 
 export default Home;
+
