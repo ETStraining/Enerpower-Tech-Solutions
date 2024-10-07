@@ -19,7 +19,6 @@ const MyPart: React.FC = () => {
           CUSTOMER EXPERIENCE EXPERT
         </h2>
       </div>
-      
     </div>
   );
 };
