@@ -24,8 +24,8 @@ const Mission = () => {
                <p className={styles.servicepp}>Enhanced Reception in Any Building .</p>
                <p  className={styles.p}> Anywhere</p>
               </div>
-              <div>
-              <Image
+              <div className={styles.image}>
+              <Image 
    src="/div.png" alt="My Image"  width={200} height={200} />
 
               </div>
