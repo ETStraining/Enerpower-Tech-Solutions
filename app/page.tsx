@@ -6,4 +6,6 @@ export default function Home() {
       <Navbar/>
     </div>
   );
-}
+};
+
+export default HomePage;
