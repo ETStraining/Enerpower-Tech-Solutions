@@ -9,9 +9,8 @@ import { LiaTwitterSquare } from "react-icons/lia";
 import { CgYoutube } from "react-icons/cg";
 import Link from "next/link";
 
-
 export default function Footer() {
-  
+
 
     return (
         <div className={`flex flex-wrap items-center justify-center text-lg md:gap-20 md:flex-wrap lg:gap-40 py-10 `}>
