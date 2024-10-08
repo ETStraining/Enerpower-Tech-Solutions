@@ -46,6 +46,7 @@ export default function Footer() {
 
                 <h3 className="pb-4">FOLLOW US</h3>
                 <div className="flex gap-3 pt-3">
+<<<<<<< HEAD
                     <Link href="/">
                         <CiLinkedin fontSize={35} />
                     </Link>
@@ -61,6 +62,23 @@ export default function Footer() {
                     <Link href="/">
                         <CgYoutube fontSize={35} />
                     </Link>
+=======
+                    <a href="https://www.linkedin.com/company/enerpower-tech-solutions/" target="_blank" >
+                        <CiLinkedin fontSize={35} className={isDarkMode ? 'text-white' : 'text-black'} />
+                    </a>
+                    <a href="#">
+                        <CiFacebook fontSize={35} className={isDarkMode ? 'text-white' : 'text-black'} />
+                    </a>
+                    <a href="#">
+                        <FaInstagram fontSize={35} className={isDarkMode ? 'text-white' : 'text-black'} />
+                    </a>
+                    <a href="#">
+                        <LiaTwitterSquare fontSize={35} className={isDarkMode ? 'text-white' : 'text-black'} />
+                    </a>
+                    <a href="#">
+                        <CgYoutube fontSize={35} className={isDarkMode ? 'text-white' : 'text-black'} />
+                    </a>
+>>>>>>> 91cc5cb408644c8cfbdec31e06a5738d873d7209
                 </div>
             </div>
 

@@ -2,7 +2,7 @@ import React from 'react';
 import Navbar from '../nav/page';
 import Boarding from '../bording/page';
 import About from '../about/page';
-import Mission from '../mission/page';
+// import Services from '../components/Services';
 import Footer from '../footer/page';
 import Container from './container'; 
 
@@ -13,7 +13,7 @@ const MainP = () => {
       <Container>
         <Boarding />
         <About />
-        <Mission />
+        {/* <Services /> */}
         <Footer />
       </Container>
     </div>
