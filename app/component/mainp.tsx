@@ -4,7 +4,7 @@ import { ThemeProvider } from './themeContent'; // Adjust the path as needed
 import Navbar from './navigation';
 import Boarding from '../bording/page';
 import About from '../about/page';
-import Mission from '../mission/page';
+// import Services from '../components/Services';
 import Footer from '../footer/page';
 
 export default function MainP() {
@@ -14,7 +14,7 @@ export default function MainP() {
         <Navbar />
         <Boarding />
         <About />
-        <Mission />
+        {/* <Services /> */}
         <Footer />
       </div>
     </ThemeProvider>
