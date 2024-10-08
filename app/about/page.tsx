@@ -1,12 +1,11 @@
 "use client";
 import Image from 'next/image';
-import { useTheme } from '../component/themeContent'; // Ensure the path is correct
 
 const About = () => {
-  const { isDarkMode } = useTheme(); 
+ 
 
   return (
-    <div className={`py-16 ${isDarkMode ? 'bg-black text-white' : 'bg-white text-black'}`}>
+    <div className={`py-16 `}>
       <div className="max-w-7xl mx-auto space-y-8 flex flex-col md:flex-row">
 
         {/* First Section */}
@@ -16,7 +15,7 @@ const About = () => {
           </div>
           <div className="text-left">
             <h3 className="text-xl font-bold">Architect your Solution</h3>
-            <p className={`mt-2 ${isDarkMode ? 'text-gray-400' : 'text-gray-700'}`}>
+            <p className={`mt-2`}>
               Our team can join your operational, technological, and strategic challenges...
             </p>
           </div>
@@ -29,7 +28,7 @@ const About = () => {
           </div>
           <div className="text-left">
             <h3 className="text-xl font-bold">Engineer your Solution</h3>
-            <p className={`mt-2 ${isDarkMode ? 'text-gray-400' : 'text-gray-700'}`}>
+            <p className={`mt-2 `}>
               We promptly put together your research engineering dream team...
             </p>
           </div>
@@ -42,7 +41,7 @@ const About = () => {
           </div>
           <div className="text-left">
             <h3 className="text-xl font-bold">ReEngineer your Business Process</h3>
-            <p className={`mt-2 ${isDarkMode ? 'text-gray-400' : 'text-gray-700'}`}>
+            <p className={`mt-2`}>
               Bolster up your team, ensure digital transformations, swiftly gather speed...
             </p>
           </div>
@@ -52,7 +51,7 @@ const About = () => {
       {/* Easy Process Section */}
       <div className="mt-16">
         <h2 className="text-center text-3xl font-bold">Easy Process</h2>
-        <p className={`text-center mt-4 ${isDarkMode ? 'text-gray-400' : 'text-gray-700'}`}>
+        <p className={`text-center mt-4`}>
           We specialize in helping you build a team of expert developers, testers, and leaders.
         </p>
       </div>

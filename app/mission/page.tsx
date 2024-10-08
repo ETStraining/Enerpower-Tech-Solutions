@@ -1,12 +1,12 @@
-"use client";
-import { useTheme } from '../component/themeContent'; // Adjust the path as needed
+import { useContext } from 'react';
+
 import Image from 'next/image';
 
 const Mission = () => {
-  const { isDarkMode } = useTheme(); // Get the current theme mode
+ 
 
   return (
-    <div className={`mx-auto py-20 px-4 ${isDarkMode ? 'bg-black text-gray-200' : 'bg-white text-black'}`}>
+    <div className={`mx-auto py-20 px-4 `}>
       <h1 className="text-3xl font-bold mb-6 text-center">Mission</h1>
       <p className="text-lg leading-relaxed text-center mb-10 max-w-4xl mx-auto">
         Our mission is to provide innovative, reliable, and secure technology solutions in surveillance, software development, and networking.
