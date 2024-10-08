@@ -1,6 +1,5 @@
 "use client";
 import Image from 'next/image';
-import { useTheme } from '../component/themeContent'; // Ensure the path is correct
 
 const About = () => {
   return (

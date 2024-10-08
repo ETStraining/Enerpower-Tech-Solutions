@@ -8,13 +8,12 @@ import { FaInstagram } from "react-icons/fa6";
 import { LiaTwitterSquare } from "react-icons/lia";
 import { CgYoutube } from "react-icons/cg";
 import Link from "next/link";
-import { useTheme } from "../component/themeContent";
 
 export default function Footer() {
-    const { isDarkMode } = useTheme(); // Access dark mode state
+
 
     return (
-        <div className={`flex flex-wrap items-center justify-center text-lg md:gap-20 md:flex-wrap lg:gap-40 py-10 ${isDarkMode ? 'bg-black text-white' : 'bg-white text-black'}`}>
+        <div className={`flex flex-wrap items-center justify-center text-lg md:gap-20 md:flex-wrap lg:gap-40 py-10 `}>
             <div className="text-sm md:text-lg">
                 <Image
                     src="/images/logo.svg"
@@ -28,17 +27,17 @@ export default function Footer() {
                     <br />elite software developers on <br />demand
                 </p>
                 <div className="flex gap-4 items-end pb-7">
-                    <IoMdCall fontSize={30} className={isDarkMode ? 'text-white' : 'text-black'} />
+                    <IoMdCall fontSize={30} />
                     <p>+94 713249222</p>
                 </div>
 
                 <div className="flex gap-4 items-end pb-7">
-                    <MdOutlineEmail fontSize={25} className={isDarkMode ? 'text-white' : 'text-black'} />
+                    <MdOutlineEmail fontSize={25} />
                     <p>hello@courtney.lk</p>
                 </div>
 
                 <div className="flex gap-4 items-center pb-7">
-                    <IoLocationOutline fontSize={30} className={isDarkMode ? 'text-white' : 'text-black'} />
+                    <IoLocationOutline fontSize={30} />
                     <p>
                         Courtney Lanka (Private) Limited <br />
                         Level 35 <br />World Trade Center <br />Colombo 01
@@ -47,21 +46,21 @@ export default function Footer() {
 
                 <h3 className="pb-4">FOLLOW US</h3>
                 <div className="flex gap-3 pt-3">
-                    <a href="https://www.linkedin.com/company/enerpower-tech-solutions/" target="_blank" >
-                        <CiLinkedin fontSize={35} className={isDarkMode ? 'text-white' : 'text-black'} />
-                    </a>
-                    <a href="#">
-                        <CiFacebook fontSize={35} className={isDarkMode ? 'text-white' : 'text-black'} />
-                    </a>
-                    <a href="#">
-                        <FaInstagram fontSize={35} className={isDarkMode ? 'text-white' : 'text-black'} />
-                    </a>
-                    <a href="#">
-                        <LiaTwitterSquare fontSize={35} className={isDarkMode ? 'text-white' : 'text-black'} />
-                    </a>
-                    <a href="#">
-                        <CgYoutube fontSize={35} className={isDarkMode ? 'text-white' : 'text-black'} />
-                    </a>
+                    <Link href="/">
+                        <CiLinkedin fontSize={35} />
+                    </Link>
+                    <Link href="/">
+                        <CiFacebook fontSize={35} />
+                    </Link>
+                    <Link href="/">
+                        <FaInstagram fontSize={35} />
+                    </Link>
+                    <Link href="/">
+                        <LiaTwitterSquare fontSize={35} />
+                    </Link>
+                    <Link href="/">
+                        <CgYoutube fontSize={35} />
+                    </Link>
                 </div>
             </div>
 
