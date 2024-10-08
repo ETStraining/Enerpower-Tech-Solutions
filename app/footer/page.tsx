@@ -47,21 +47,21 @@ export default function Footer() {
 
                 <h3 className="pb-4">FOLLOW US</h3>
                 <div className="flex gap-3 pt-3">
-                    <Link href="/">
+                    <a href="https://www.linkedin.com/company/enerpower-tech-solutions/" target="_blank" >
                         <CiLinkedin fontSize={35} className={isDarkMode ? 'text-white' : 'text-black'} />
-                    </Link>
-                    <Link href="/">
+                    </a>
+                    <a href="#">
                         <CiFacebook fontSize={35} className={isDarkMode ? 'text-white' : 'text-black'} />
-                    </Link>
-                    <Link href="/">
+                    </a>
+                    <a href="#">
                         <FaInstagram fontSize={35} className={isDarkMode ? 'text-white' : 'text-black'} />
-                    </Link>
-                    <Link href="/">
+                    </a>
+                    <a href="#">
                         <LiaTwitterSquare fontSize={35} className={isDarkMode ? 'text-white' : 'text-black'} />
-                    </Link>
-                    <Link href="/">
+                    </a>
+                    <a href="#">
                         <CgYoutube fontSize={35} className={isDarkMode ? 'text-white' : 'text-black'} />
-                    </Link>
+                    </a>
                 </div>
             </div>
 
