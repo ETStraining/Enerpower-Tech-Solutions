@@ -7,7 +7,6 @@ const About = () => {
     <div className={`py-16 `}>
       <div className="max-w-7xl mx-auto space-y-8 flex flex-col md:flex-row">
 
-        {/* First Section */}
         <div className="flex items-center space-x-6">
           <div className="w-24 h-24 rounded bg-yellow-400 flex items-center justify-center">
             <Image src="/cube-1.png" alt="Architect your Solution" width={80} height={80} />
