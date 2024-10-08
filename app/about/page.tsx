@@ -3,7 +3,6 @@ import Image from 'next/image';
 
 const About = () => {
  
-
   return (
     <div className={`py-16 `}>
       <div className="max-w-7xl mx-auto space-y-8 flex flex-col md:flex-row">
@@ -33,8 +32,7 @@ const About = () => {
             </p>
           </div>
         </div>
-
-        {/* Third Section */}
+      
         <div className="flex items-center space-x-6">
           <div className="w-24 h-24 rounded bg-yellow-400 flex items-center justify-center">
             <Image src="/technical-support 1.png" alt="ReEngineer your Business Process" width={80} height={80} />
