@@ -42,6 +42,7 @@ export default function Icon({className}: {className: string}){
                 className="fill-current"
             />
         </svg>
+        
 
     )
 }
