@@ -1,10 +1,11 @@
+import dynamic from 'next/dynamic';
 
-import Main from "./component/mainp";
+const Main = dynamic(() => import('./component/mainp'), { ssr: false });
+
 export default function Home() {
   return (
     <div>
-      <Main/>
+      <Main />
     </div>
   );
 };
-
