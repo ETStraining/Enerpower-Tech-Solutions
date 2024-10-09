@@ -1,7 +1,7 @@
 "use client";
 import Image from 'next/image';
 import { useTheme } from '../component/themeContent'; // Ensure the path is correct
-
+import Icon from "@/app/component/Icon";
 const About = () => {
   return (
     <div className="  py-16">
@@ -63,7 +63,7 @@ const About = () => {
       
       <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 mt-10">
         <div className="text-center">
-          <Image src="/Group.png" alt="You Ask" width={80} height={80} />
+          <Icon className= 'text-red-600'/>
           <h4 className="text-left font-semibold mt-7"> 01 YOU ASK</h4>
         </div>
         <div className="text-center">
