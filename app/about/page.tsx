@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const About = () => {
   return (
-    <div className="bg-black text-white py-16">
+    <div className=" py-16">
       
       <div className="max-w-4xl mx-auto space-y-8 flex ">
         
@@ -15,7 +15,7 @@ const About = () => {
           
           <div className="text-left">
             <h3 className="text-xl font-bold">Architect your <p>Solution</p></h3>
-            <p className="mt-2 text-gray-400">
+            <p className="mt-2 ">
               Our team can join your operational, technological, and strategic challenges...
             </p>
           </div>
@@ -28,7 +28,7 @@ const About = () => {
           </div>
           <div className="text-left">
             <h3 className="text-xl font-bold">Engineer your Solution</h3>
-            <p className="mt-2 text-gray-400">
+            <p className="mt-2 ">
               We promptly put together your research engineering dream team...
             </p>
           </div>
@@ -41,7 +41,7 @@ const About = () => {
           </div>
           <div className="text-left">
             <h3 className="text-xl font-bold">ReEngineer your Business Process </h3>
-            <p className="mt-2 text-gray-400">
+            <p className="mt-2 ">
               Bolster up your team, ensure digital transformations, 
               swiftly gather speed...
             </p>
@@ -53,7 +53,7 @@ const About = () => {
       
       <div className="mt-16">
         <h2 className="text-center text-3xl font-bold">Easy Process</h2>
-        <p className="text-center text-gray-400 mt-4">
+        <p className="text-center  mt-4">
           We specialize in helping you build a team of expert developers, testers, and leaders.
         </p>
       </div>
@@ -76,6 +76,7 @@ const About = () => {
         <div className="text-center ">
           <Image src="/medal 4.png" alt="You Get" width={80} height={80} />
           <h4 className="text-left font-semibold mt-7"> 04 YOU GET</h4>
+     
         </div>
       </div>
     </div>
