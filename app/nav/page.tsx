@@ -33,15 +33,15 @@ const Navbar = () => {
     }
   }, []);
 
-  const navbarClasses = `fixed top-0 left-0 w-full px-4 py-3 z-50 transition-all duration-300 ${
+  const navbarClasses = `fixed top-0 left-0 w-full px-6 py-4 z-50 transition-all duration-300 ${
     isDarkMode ? 'bg-black text-white' : 'bg-white text-black'
   } shadow-lg`;
 
   return (
     <nav className={navbarClasses}>
       <div className="container mx-auto flex justify-between items-center flex-wrap">
-        {/* Logo */}
-        <div className="flex items-center">
+        {/* Logo with padding */}
+        <div className="flex items-center p-2">
           <Image
             src="/est.png" // Replace with your logo image
             alt="Logo"
@@ -120,11 +120,11 @@ const Navbar = () => {
               BUILD A TEAM →
             </Link>
             <Link href="/contact" className="hover:text-yellow-400 transition-colors">Contact us</Link>
-            {/* Dark Mode Toggle Icon */}
-           
           </div>
+
+          {/* Dark Mode Toggle Icon */}
           <div className="flex items-center space-x-2">
-          <FontAwesomeIcon
+            <FontAwesomeIcon
               icon={isDarkMode ? faSun : faMoon}
               className="text-xl cursor-pointer transition-transform duration-500 text-yellow-400"
               onClick={toggleTheme}
