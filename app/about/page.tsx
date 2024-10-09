@@ -2,6 +2,9 @@
 import Image from 'next/image';
 import Container from "@/app/component/container";
 import Icon from "@/app/component/Icon";
+import Icon2 from "@/app/component/Icon2";
+import Icon3 from "@/app/component/Icon3";
+import Icon4 from "@/app/component/Icon4";
 
 
 
@@ -55,28 +58,30 @@ const About = () => {
         </p>
       </div>
 
-
+      <Container>
       <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 mt-10">
         <div className="text-center">
           <Icon className="text-green"/>
           <h4 className="text-left font-semibold mt-7"> 01 YOU ASK</h4>
         </div>
         <div className="text-center">
-          {/* <Image src="/Group (1).png" alt="We Proceed" width={80} height={80}/> */}
-          <Icon className="text-green"/>
+         
+          <Icon2 className="text-green"/>
           <h4 className="text-left font-semibold mt-7"> 02 WE PROCEED</h4>
         </div>
         <div className="text-center">
-          {/* <Image src="/handshake 4.png" alt="Negotiate" width={80} height={80}/> */}
-          <Icon className="text-green"/>
+         
+          <Icon3 className="text-green"/>
           <h4 className="text-left font-semibold mt-7"> 03 NEGOTIATE</h4>
         </div>
         <div className="text-center ">
-          {/* <Image src="/medal 4.png" alt="You Get" width={80} height={80}/> */}
-          <Icon className="text-green"/>
+          
+          <Icon4 className="text-green"/>
           <h4 className="text-left font-semibold mt-7"> 04 YOU GET</h4>
         </div>
       </div>
+      </Container>
+      
     </div>
   );
 };
