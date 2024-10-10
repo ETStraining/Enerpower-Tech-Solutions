@@ -2,3 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+/* styles/globals.css */
+
+body {
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  body.light-mode {
+    background-color: white;
+    color: black;
+  }
+  
+  body.dark-mode {
+    background-color: black; /* Dark background */
+    color: white; /* Light text */
+  }
+  
+  /* Additional styles for other sections */
+  

@@ -1,22 +1,23 @@
-// MainP.js
 import React from 'react';
-import { ThemeProvider } from './themeContent'; // Adjust the path as needed
-import Navbar from './navigation';
+import Navbar from '../nav/page';
 import Boarding from '../bording/page';
 import About from '../about/page';
 import Mission from '../mission/page';
 import Footer from '../footer/page';
+import Container from './container'; 
 
-export default function MainP() {
+const MainP = () => {
   return (
-    <ThemeProvider>
-      <div>
-        <Navbar />
+    <div>
+      <Navbar />
+      <Container>
         <Boarding />
         <About />
-        <Mission />
+        <Mission/>
         <Footer />
-      </div>
-    </ThemeProvider>
+      </Container>
+    </div>
   );
-}
+};
+
+export default MainP;
