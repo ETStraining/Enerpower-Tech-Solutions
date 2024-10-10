@@ -23,6 +23,7 @@ export default function Footer() {
             document.body.classList.toggle('light-mode', !darkModeEnabled);
           } else {
             document.body.classList.add('light-mode'); // Default to light mode
+            
           }
     }, [])
     return (
