@@ -4,12 +4,12 @@ import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 const Boarding: React.FC = () => {
   return (
-    <div className="relative flex flex-col sm:flex-row items-start bg-black " style={{ width: '100%', margin: '0 auto' }}>
+    <div className="relative flex flex-col sm:flex-row items-start bg-black pt-40" style={{ width: '100%', margin: '0 auto' }}>
       <div className="relative flex flex-col sm:flex-row w-full">
        
-        <div className="relative flex flex-col w-full sm:w-1/2 p-4 ml-8 sm:ml-12 lg:ml-14 pl-20 sm:pl-32"> 
+        <div className="relative flex flex-col w-full sm:w-1/2 p-4 ml-8 sm:ml-12 lg:ml-14"> 
           <h2
-            className="text-xl uppercase sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl mb-4 font-bold pl-40"
+            className="text-xl uppercase sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl mb-4 font-bold"
             style={{
               backgroundColor: "white",
               backgroundImage: "url('/est.png')", 
@@ -27,7 +27,7 @@ const Boarding: React.FC = () => {
             Customer <br /> Experience <br /> Experts.
           </h2>
 
-          <div className="flex justify-start mt-4 pl-40">
+          <div className="flex justify-start mt-4">
             <button
               className="flex items-center bg-blue-500 text-white font-semibold rounded-lg mt-6"
               style={{ height: '48px', width: '160px', fontSize: '14px' }}
@@ -37,7 +37,8 @@ const Boarding: React.FC = () => {
             </button>
           </div>
         </div>
-        <div className="relative w-full sm:w-1/2 flex justify-start mt-2 sm:mt-0 pr-20 sm:pr-24 lg:pr-32 pr-40"> 
+        
+        <div className="relative w-full sm:w-1/2 flex justify-start mt-2 sm:mt-0"> 
           <img
             src="/Rectangle 26.png"
             alt="Description of the picture"
