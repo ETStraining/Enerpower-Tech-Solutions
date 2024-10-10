@@ -37,8 +37,6 @@ const Boarding: React.FC = () => {
             </button>
           </div>
         </div>
-
-       
         <div className="relative w-full sm:w-1/2 flex justify-start mt-2 sm:mt-0 pr-20 sm:pr-24 lg:pr-32 pr-40"> 
           <img
             src="/Rectangle 26.png"
