@@ -9,13 +9,25 @@ import { LiaTwitterSquare } from "react-icons/lia";
 import { CgYoutube } from "react-icons/cg";
 import Link from "next/link";
 import Container from "../component/container";
+import { useState, useEffect } from "react";
 
 export default function Footer() {
+    const [isDarkMode, setIsDarkMode] = useState(false);
 
-
+    useEffect(()=>{
+        const savedTheme = localStorage.getItem("darkMode")
+        if (savedTheme) {
+            const darkModeEnabled = JSON.parse(savedTheme);
+            setIsDarkMode(darkModeEnabled);
+            document.body.classList.toggle('dark-mode', darkModeEnabled);
+            document.body.classList.toggle('light-mode', !darkModeEnabled);
+          } else {
+            document.body.classList.add('light-mode'); // Default to light mode
+          }
+    }, [])
     return (
         <Container>
-            <div className={`flex flex-wrap items-center justify-center text-lg md:gap-20 md:flex-wrap lg:gap-40 py-10 `}>
+            <div className={`flex flex-wrap items-center justify-between text-lg md:gap-20 md:flex-wrap lg:gap-40 py-10 `}>
                 <div className="text-sm md:text-lg">
                     <Image
                         src="/images/logo.svg"
@@ -48,22 +60,22 @@ export default function Footer() {
 
                     <h3 className="pb-4">FOLLOW US</h3>
                     <div className="flex gap-3 pt-3">
-                        <Link href="/">
-                            <CiLinkedin fontSize={35} />
-                        </Link>
-                        <Link href="/">
-                            <CiFacebook fontSize={35} />
-                        </Link>
-                        <Link href="/">
-                            <FaInstagram fontSize={35} />
-                        </Link>
-                        <Link href="/">
-                            <LiaTwitterSquare fontSize={35} />
-                        </Link>
-                        <Link href="/">
-                            <CgYoutube fontSize={35} />
-                        </Link>
-                    </div>
+                    <a href="https://www.linkedin.com/company/enerpower-tech-solutions/" target="_blank" >
+                        <CiLinkedin fontSize={35} color={isDarkMode ? 'white' : 'black'} />
+                    </a>
+                    <a href="#">
+                        <CiFacebook fontSize={35} color={isDarkMode ? 'white' : 'black'} />
+                    </a>
+                    <a href="#">
+                        <FaInstagram fontSize={35} color={isDarkMode ? 'white' : 'black'} />
+                    </a>
+                    <a href="#">
+                        <LiaTwitterSquare fontSize={35} color={isDarkMode ? 'white' : 'black'} />
+                    </a>
+                    <a href="#">
+                        <CgYoutube fontSize={35} color={isDarkMode ? 'white' : 'black'} />
+                    </a>
+                </div>
                 </div>
 
                 <div className="flex flex-col gap-5 mt-20">
