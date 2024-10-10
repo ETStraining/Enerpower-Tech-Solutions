@@ -5,6 +5,7 @@ import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 const Boarding: React.FC = () => {
   return (
     <>
+    
       <div className="relative flex flex-col sm:flex-row items-start ">
         
         <div className="relative flex items-start justify-center w-full sm:w-4/5 md:w-3/4 lg:w-2/3 p-6 rounded-lg mr-6">
