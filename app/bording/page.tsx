@@ -6,14 +6,14 @@ import Container from "../component/container";
 const Boarding: React.FC = () => {
   return (
     <Container>
-      <div className="relative flex flex-col sm:flex-row items-start bg-black pt-40" style={{ width: '100%', margin: '0 auto' }}>
+      <div className="relative flex flex-col sm:flex-row items-start pt-40" style={{ width: '100%', margin: '0 auto' }}>
         <div className="relative flex flex-col sm:flex-row w-full">
           
           <div className="relative flex flex-col w-full sm:w-1/2 p-4 ml-8 sm:ml-12 lg:ml-14">
             <h2
               className="text-xl uppercase sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl mb-4 font-bold text-black dark:text-transparent"
               style={{
-                backgroundColor: "white",
+                backgroundColor: "grey",
                 backgroundImage: "url('/est.png')", 
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
