@@ -1,7 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
-import Container from "../component/container";
+import Container from "../container";
 
 const Boarding: React.FC = () => {
   return (
@@ -41,7 +41,7 @@ const Boarding: React.FC = () => {
 
           <div className="relative w-full sm:w-1/2 flex justify-start mt-2 sm:mt-0">
             <img
-              src="/Rectangle 26.png"
+              src="/Rectangle%2026.png"
               alt="Description of the picture"
               className="rounded-lg shadow-md opacity-80"
               style={{

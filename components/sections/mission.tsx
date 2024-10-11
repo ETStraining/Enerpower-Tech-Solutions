@@ -1,4 +1,4 @@
-import Container from '../component/container';
+import Container from '../container';
 import Image from 'next/image';
 
 const Mission = () => {

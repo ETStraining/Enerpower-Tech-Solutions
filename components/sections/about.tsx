@@ -1,10 +1,10 @@
 "use client";
 import Image from 'next/image';
-import Container from "@/app/component/container";
-import Icon from "@/app/component/Icon";
-import Icon2 from "@/app/component/Icon2";
-import Icon3 from "@/app/component/Icon3";
-import Icon4 from "@/app/component/Icon4";
+import Container from "@/components/container";
+import Icon from "@/components/icons/Icon";
+import Icon2 from "@/components/icons/Icon2";
+import Icon3 from "@/components/icons/Icon3";
+import Icon4 from "@/components/icons/Icon4";
 
 
 
