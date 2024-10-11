@@ -1,12 +1,16 @@
-// Keep the desired import and component logic
-import dynamic from 'next/dynamic';
+import Boarding from "@/components/sections/boarding";
+import About from "@/components/sections/about";
+import Mission from "@/components/sections/mission";
+import Footer from "@/components/footer";
 
-const Main = dynamic(() => import('./component/mainp'), { ssr: false });
 
 export default function Home() {
   return (
     <div>
-      <Main />
+        <Boarding />
+        <About />
+        <Mission/>
+        <Footer />
     </div>
   );
 }
