@@ -8,7 +8,7 @@ import { FaInstagram } from "react-icons/fa6";
 import { LiaTwitterSquare } from "react-icons/lia";
 import { CgYoutube } from "react-icons/cg";
 import Link from "next/link";
-import Container from "../component/container";
+import Container from "./container";
 import { useState, useEffect } from "react";
 
 export default function Footer() {
@@ -81,11 +81,11 @@ export default function Footer() {
 
                 <div className="flex flex-col gap-5 mt-20">
                     <h2 className="font-semibold">Company</h2>
-                    <Link href="/">About us</Link>
-                    <Link href="/">Success Stories</Link>
-                    <Link href="/">Privacy policy</Link>
-                    <Link href="/">Terms & consitions</Link>
-                    <Link href="/">Contact us</Link>
+                    <Link href="/public">About us</Link>
+                    <Link href="/public">Success Stories</Link>
+                    <Link href="/public">Privacy policy</Link>
+                    <Link href="/public">Terms & consitions</Link>
+                    <Link href="/public">Contact us</Link>
                 </div>
 
                 <div className="flex flex-col gap-5 mt-20">

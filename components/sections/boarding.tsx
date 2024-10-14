@@ -1,19 +1,20 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
-import Container from "../component/container";
+import Container from "../container";
 
 const Boarding: React.FC = () => {
   return (
     <Container>
-      <div className="relative flex flex-col sm:flex-row items-start" style={{  paddingTop: '180' }}>
+      <div className="relative flex flex-col sm:flex-row items-start pt-40" style={{ width: '100%', margin: '0 auto' }}>
         <div className="relative flex flex-col sm:flex-row w-full">
-          <div className="relative flex flex-col w-full sm:w-1/2 p-4 ml-8 sm:ml-12 lg:ml-14 pl-20 sm:pl-32">
+          
+          <div className="relative flex flex-col w-full sm:w-1/2 p-4 ml-8 sm:ml-12 lg:ml-14">
             <h2
-              className="text-xl uppercase sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl mb-4 font-bold pl-40 text-black dark:text-transparent" // Added text-black for light mode, dark:text-transparent for dark mode
+              className="text-xl uppercase sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl mb-4 font-bold text-black dark:text-transparent"
               style={{
-                backgroundColor: "white",
-                backgroundImage: "url('/est.png')",
+                backgroundColor: "grey",
+                backgroundImage: "url('/est.png')", 
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 WebkitBackgroundClip: 'text',
@@ -27,7 +28,7 @@ const Boarding: React.FC = () => {
               Customer <br /> Experience <br /> Experts.
             </h2>
 
-            <div className="flex justify-start mt-4 pl-40">
+            <div className="flex justify-start mt-4">
               <button
                 className="flex items-center bg-blue-500 text-white font-semibold rounded-lg mt-6"
                 style={{ height: '48px', width: '160px', fontSize: '14px' }}
@@ -38,9 +39,9 @@ const Boarding: React.FC = () => {
             </div>
           </div>
 
-          <div className="relative w-full sm:w-1/2 flex justify-start mt-2 sm:mt-0 pr-20 sm:pr-24 lg:pr-32 pr-40">
+          <div className="relative w-full sm:w-1/2 flex justify-start mt-2 sm:mt-0">
             <img
-              src="/Rectangle 26.png"
+              src="/Rectangle%2026.png"
               alt="Description of the picture"
               className="rounded-lg shadow-md opacity-80"
               style={{
