@@ -26,13 +26,14 @@ const services = [
 
 const About = () => {
   return (
-    <div className="py-16">
+    <Container>
+      <div className="max-w-5xl mx-auto py-16  sm:px-6 lg:px-8 items-center sm:align-center  w-full">
 
-      <Container>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Services Section */}
+        <div className=" flex items-center  grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <div key={index} className="flex items-center space-x-6">
-              <div className="w-24 h-24 rounded bg-yellow-400 flex items-center justify-center">
+            <div key={index} className="flex items-center space-x-6 sm:space-x-6">
+              <div className="w-24 h-15 mb-10 rounded bg-yellow-400 flex items-center justify-center">
                 <Image src={service.img} alt={service.title} width={80} height={80} />
               </div>
               <div className="text-left">
@@ -44,17 +45,17 @@ const About = () => {
             </div>
           ))}
         </div>
-      
 
-      <div className="mt-16 text-center">
-        <h2 className="text-3xl font-bold">Easy Process</h2>
-        <p className="text-lg mt-4">
-          We specialize in helping you build a team of expert developers, testers, and leaders.
-        </p>
-      </div>
+        {/* Easy Process Section */}
+        <div className="mt-16 text-center">
+          <h2 className="text-3xl font-bold sm:text-4xl">Easy Process</h2>
+          <p className="text-lg mt-4 sm:text-lg mb-16 sm:mb-32 max-w-4xl mx-auto">
+            We specialize in helping you build a team of expert developers, testers, and leaders.
+          </p>
+        </div>
 
-      
-        <div className="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-10">
+        {/* Process Steps Section */}
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 justify-center mb-16 sm:mb-32">
           <div className="text-center">
             <Icon className="text-green" />
             <h4 className="text-left font-semibold mt-7"> 01 YOU ASK</h4>
@@ -72,9 +73,8 @@ const About = () => {
             <h4 className="text-left font-semibold mt-7"> 04 YOU GET</h4>
           </div>
         </div>
-      </Container>
-
-    </div>
+      </div>
+    </Container>
   );
 };
 
