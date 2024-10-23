@@ -96,13 +96,7 @@ export default function Footer() {
                     <p>Build remote office</p>
                 </div>
 
-                <div className="flex flex-col gap-5 mt-20 ml-16 md:ml-0">
-                    <h1>How to start</h1>
-                    <p>You asked</p>
-                    <p>We proceed</p>
-                    <p>Negotiate</p>
-                    <p>You get</p>
-                </div>
+               
             </div>
         </Container>
     );

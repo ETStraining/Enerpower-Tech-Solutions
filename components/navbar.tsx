@@ -60,7 +60,7 @@ const Navbar = () => {
 
         {/* Middle: Navigation Links */}
         <div className={`hidden md:flex items-center space-x-6`}>
-          <Link href="/how-to-start" className="hover:text-yellow-400 transition-colors">How to start</Link>
+          <Link href="/how-to-start" className="hover:text-yellow-400 transition-colors">ABOUT US </Link>
 
           {/* Services Dropdown */}
           <div className="relative">
@@ -68,7 +68,7 @@ const Navbar = () => {
               onClick={() => setIsServicesDropdownOpen(!isServicesDropdownOpen)}
               className="hover:text-yellow-400 flex items-center space-x-1 transition-colors"
             >
-              <span>Services</span>
+              <span>SERVICES</span>
               <FontAwesomeIcon icon={faCaretDown} />
             </button>
             {isServicesDropdownOpen && (
@@ -89,7 +89,7 @@ const Navbar = () => {
               onClick={() => setIsTechnologiesDropdownOpen(!isTechnologiesDropdownOpen)}
               className="hover:text-yellow-400 flex items-center space-x-1 transition-colors"
             >
-              <span>Technologies</span>
+              <span>TECHNOLOGY</span>
               <FontAwesomeIcon icon={faCaretDown} />
             </button>
             {isTechnologiesDropdownOpen && (
@@ -104,22 +104,13 @@ const Navbar = () => {
             )}
           </div>
 
-          <Link href="/careers" className="hover:text-yellow-400 transition-colors">Careers</Link>
-          <Link href="/about" className="hover:text-yellow-400 transition-colors">About</Link>
+          <Link href="/careers" className="hover:text-yellow-400 transition-colors">CAREERS</Link>
+         
 
           {/* Right: CTA and Contact */}
           <div className="flex items-center space-x-2">
-            <Link
-              href="/build-a-team"
-              className={`border px-4 py-2 rounded-lg transition-colors duration-300 ${
-                isDarkMode
-                  ? 'border-white text-white bg-gray-900 hover:bg-white hover:text-black'
-                  : 'border-black text-black bg-gray-100 hover:bg-black hover:text-white'
-              }`}
-            >
-              BUILD A TEAM →
-            </Link>
-            <Link href="/contact" className="hover:text-yellow-400 transition-colors">Contact us</Link>
+           
+            <Link href="/contact" className="hover:text-yellow-400 transition-colors">CONTACT US </Link>
           </div>
 
           {/* Dark Mode Toggle Icon */}
@@ -137,13 +128,11 @@ const Navbar = () => {
       {isMobileMenuOpen && (
         <div className={`md:hidden mt-4 p-4 rounded-lg ${isDarkMode ? 'bg-black text-white' : 'bg-white text-black'} shadow-lg`}>
           <div className="flex flex-col space-y-2">
-            <Link href="/how-to-start" className="py-2 text-center hover:text-yellow-400" onClick={() => setIsMobileMenuOpen(false)}>How to start</Link>
-            <Link href="/services" className="py-2 text-center hover:text-yellow-400" onClick={() => setIsMobileMenuOpen(false)}>Services</Link>
-            <Link href="/technologies" className="py-2 text-center hover:text-yellow-400" onClick={() => setIsMobileMenuOpen(false)}>Technologies</Link>
-            <Link href="/careers" className="py-2 text-center hover:text-yellow-400" onClick={() => setIsMobileMenuOpen(false)}>Careers</Link>
-            <Link href="/about" className="py-2 text-center hover:text-yellow-400" onClick={() => setIsMobileMenuOpen(false)}>About</Link>
-            <Link href="/build-a-team" className="py-2 text-center hover:text-yellow-400" onClick={() => setIsMobileMenuOpen(false)}>Build a Team</Link>
-            <Link href="/footer" className="py-2 text-center hover:text-yellow-400" onClick={() => setIsMobileMenuOpen(false)}>Contact Us</Link>
+            <Link href="/how-to-start" className="py-2 text-center hover:text-yellow-400" onClick={() => setIsMobileMenuOpen(false)}>ABOUT US</Link>
+            <Link href="/services" className="py-2 text-center hover:text-yellow-400" onClick={() => setIsMobileMenuOpen(false)}>SERVICES</Link>
+            <Link href="/technologies" className="py-2 text-center hover:text-yellow-400" onClick={() => setIsMobileMenuOpen(false)}>TECHNOLOGIES</Link>
+            <Link href="/careers" className="py-2 text-center hover:text-yellow-400" onClick={() => setIsMobileMenuOpen(false)}>CAREERS</Link>
+            <Link href="/footer" className="py-2 text-center hover:text-yellow-400" onClick={() => setIsMobileMenuOpen(false)}>CONTACT US</Link>
           </div>
         </div>
       )}
