@@ -22,7 +22,7 @@ export default function Footer() {
             document.body.classList.toggle('dark-mode', darkModeEnabled);
             document.body.classList.toggle('light-mode', !darkModeEnabled);
           } else {
-            document.body.classList.add('light-mode'); // Default to light mode
+            document.body.classList.add('light-mode'); 
             
           }
     }, [])
