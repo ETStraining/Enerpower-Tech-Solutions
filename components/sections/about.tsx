@@ -28,13 +28,13 @@ const services = [
 
 const About = () => {
   return (
-    <div className=" py-16">
+    <div className=" mx-auto py-16  sm:px-6 lg:px-8 items-center sm:align-center  w-full">
 
       <Container>
-        <div className="flex items-center">
+        <div className="flex items-center  grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           {
             services.map((service, index) => (
-                <div key={index} className="flex items-center space-x-6">
+                <div key={index} className="flex items-center space-x-6 sm:space-x-6">
                   <div className="w-24 h-15 rounded bg-yellow-400 flex items-center justify-center">
                     <Image src={service.img} alt="Engineer your Solution" width={80} height={80}/>
                   </div>
@@ -51,15 +51,15 @@ const About = () => {
       </Container>
 
 
-      <div className="mt-16">
-        <h2 className="text-center text-3xl font-bold">Easy Process</h2>
-        <p className="text-center text-lg mt-4">
+      <div className="mt-16 text-center">
+        <h2 className="text-center text-3xl font-bold sm:text-4xl">Easy Process</h2>
+        <p className="text-center text-lg mt-4 sm:text-lg mb-16 sm:px-8 max-w-4xl mx-auto">
           We specialize in helping you build a team of expert developers, testers, and leaders.
         </p>
       </div>
 
       <Container>
-      <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 mt-10">
+      <div className="max-w-4xl mx-auto grid grid-cols-2 sm:grid-cols-4 gap-8 mt-10 justify-center mb-16 sm:mb-32">
         <div className="text-center">
           <Icon className="text-green"/>
           <h4 className="text-left font-semibold mt-7"> 01 YOU ASK</h4>
