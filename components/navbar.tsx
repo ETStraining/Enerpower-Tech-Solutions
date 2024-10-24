@@ -1,4 +1,4 @@
-"use client"; 
+"use client";
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
@@ -10,9 +10,11 @@ const Navbar = () => {
   const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
   const [isTechnologiesDropdownOpen, setIsTechnologiesDropdownOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isMobileServicesDropdownOpen, setIsMobileServicesDropdownOpen] = useState(false);
+  const [isMobileTechnologiesDropdownOpen, setIsMobileTechnologiesDropdownOpen] = useState(false);
 
   const toggleTheme = () => {
-    setIsDarkMode(prevMode => {
+    setIsDarkMode((prevMode) => {
       const newMode = !prevMode;
       localStorage.setItem("darkMode", JSON.stringify(newMode));
       document.body.classList.toggle('dark-mode', newMode);
@@ -59,8 +61,8 @@ const Navbar = () => {
         </div>
 
         {/* Middle: Navigation Links */}
-        <div className={`hidden md:flex items-center space-x-6`}>
-          <Link href="/how-to-start" className="hover:text-yellow-400 transition-colors">ABOUT US </Link>
+        <div className={`hidden md:flex items-center space-x-16`}>
+          <Link href="/" className="hover:text-yellow-400 transition-colors">ABOUT US</Link>
 
           {/* Services Dropdown */}
           <div className="relative">
@@ -74,10 +76,16 @@ const Navbar = () => {
             {isServicesDropdownOpen && (
               <div className="absolute bg-white text-black mt-2 rounded-lg shadow-lg w-48 p-2">
                 <Link href="/service-1" className="flex items-center px-4 py-2 hover:bg-gray-100 rounded transition-colors">
-                  <span>Service 1</span>
+                  <span>Main system</span>
                 </Link>
                 <Link href="/service-2" className="flex items-center px-4 py-2 hover:bg-gray-100 rounded transition-colors">
-                  <span>Service 2</span>
+                  <span>Networking system</span>
+                </Link>
+                <Link href="/service-3" className="flex items-center px-4 py-2 hover:bg-gray-100 rounded transition-colors">
+                  <span>Electrical system</span>
+                </Link>
+                <Link href="/service-4" className="flex items-center px-4 py-2 hover:bg-gray-100 rounded transition-colors">
+                  <span>Security system</span>
                 </Link>
               </div>
             )}
@@ -104,13 +112,11 @@ const Navbar = () => {
             )}
           </div>
 
-          <Link href="/careers" className="hover:text-yellow-400 transition-colors">CAREERS</Link>
-         
+          <Link href="/" className="hover:text-yellow-400 transition-colors">CAREERS</Link>
 
           {/* Right: CTA and Contact */}
           <div className="flex items-center space-x-2">
-           
-            <Link href="/contact" className="hover:text-yellow-400 transition-colors">CONTACT US </Link>
+            <Link href="/" className="hover:text-yellow-400 transition-colors">CONTACT US</Link>
           </div>
 
           {/* Dark Mode Toggle Icon */}
@@ -128,9 +134,40 @@ const Navbar = () => {
       {isMobileMenuOpen && (
         <div className={`md:hidden mt-4 p-4 rounded-lg ${isDarkMode ? 'bg-black text-white' : 'bg-white text-black'} shadow-lg`}>
           <div className="flex flex-col space-y-2">
-            <Link href="/how-to-start" className="py-2 text-center hover:text-yellow-400" onClick={() => setIsMobileMenuOpen(false)}>ABOUT US</Link>
-            <Link href="/services" className="py-2 text-center hover:text-yellow-400" onClick={() => setIsMobileMenuOpen(false)}>SERVICES</Link>
-            <Link href="/technologies" className="py-2 text-center hover:text-yellow-400" onClick={() => setIsMobileMenuOpen(false)}>TECHNOLOGIES</Link>
+            <Link href="/" className="py-2 text-center hover:text-yellow-400" onClick={() => setIsMobileMenuOpen(false)}>ABOUT US</Link>
+            
+            {/* Services Dropdown in Mobile */}
+            <button
+              className=" py-4 text-center hover:text-yellow-400  "
+              onClick={() => setIsMobileServicesDropdownOpen(!isMobileServicesDropdownOpen)}
+            >
+              <span>SERVICES</span>
+              <FontAwesomeIcon icon={faCaretDown} />
+            </button>
+            {isMobileServicesDropdownOpen && (
+              <div className="flex flex-col space-y-2 pl-4">
+                <Link href="/service-1" className="py-2 hover:text-yellow-400" onClick={() => setIsMobileMenuOpen(false)}>Main system</Link>
+                <Link href="/service-2" className="py-2 hover:text-yellow-400" onClick={() => setIsMobileMenuOpen(false)}>Networking system</Link>
+                <Link href="/service-3" className="py-2 hover:text-yellow-400" onClick={() => setIsMobileMenuOpen(false)}>Electrical system</Link>
+                <Link href="/service-4" className="py-2 hover:text-yellow-400" onClick={() => setIsMobileMenuOpen(false)}>Security system</Link>
+              </div>
+            )}
+
+            {/* Technologies Dropdown in Mobile */}
+            <button
+              className=" py-2 text-center hover:text-yellow-400"
+              onClick={() => setIsMobileTechnologiesDropdownOpen(!isMobileTechnologiesDropdownOpen)}
+            >
+              <span>TECHNOLOGY</span>
+              <FontAwesomeIcon icon={faCaretDown} />
+            </button>
+            {isMobileTechnologiesDropdownOpen && (
+              <div className="flex flex-col space-y-2 pl-4">
+                <Link href="/tech-1" className="py-2 hover:text-yellow-400" onClick={() => setIsMobileMenuOpen(false)}>Tech 1</Link>
+                <Link href="/tech-2" className="py-2 hover:text-yellow-400" onClick={() => setIsMobileMenuOpen(false)}>Tech 2</Link>
+              </div>
+            )}
+
             <Link href="/careers" className="py-2 text-center hover:text-yellow-400" onClick={() => setIsMobileMenuOpen(false)}>CAREERS</Link>
             <Link href="/footer" className="py-2 text-center hover:text-yellow-400" onClick={() => setIsMobileMenuOpen(false)}>CONTACT US</Link>
           </div>
