@@ -4,7 +4,7 @@ import Container from '@/components/container'
 
 const NetworkSystem = () => {
   return (
-    <div>
+
      <Container>
       <div
         className="relative h-[800px]  md:h-[600px] lg:h-[400px] bg-cover bg-center rounded-lg overflow-hidden flex justify-center items-center"
@@ -43,11 +43,11 @@ const NetworkSystem = () => {
           
         
         </div>
-       
+      
 
      </Container>
      
-    </div>
+   
   );
 };
 
