@@ -71,16 +71,16 @@ const Navbar = () => {
             </button>
             {isServicesDropdownOpen && (
               <div className="absolute bg-white text-black mt-2 rounded-lg shadow-lg w-48 p-2">
-                <Link href="@/mainsystem" className="flex items-center px-4 py-2 hover:bg-gray-100 rounded font-bold transition-colors" onClick={() => setIsServicesDropdownOpen(false)}>
+                <Link href="/mainsystem" className="flex items-center px-4 py-2 hover:bg-gray-100 rounded font-bold transition-colors" onClick={() => setIsServicesDropdownOpen(false)}>
                   Main system
                 </Link>
-                <Link href="@/networksystem" className="flex items-center px-4 py-2 hover:bg-gray-100 rounded font-bold transition-colors" onClick={() => setIsServicesDropdownOpen(false)}>
+                <Link href="/networksystem" className="flex items-center px-4 py-2 hover:bg-gray-100 rounded font-bold transition-colors" onClick={() => setIsServicesDropdownOpen(false)}>
                   Networking system
                 </Link>
                 <Link href="/service-3" className="flex items-center px-4 py-2 hover:bg-gray-100 rounded font-bold transition-colors" onClick={() => setIsServicesDropdownOpen(false)}>
                   Electrical system
                 </Link>
-                <Link href="@/security" className="flex items-center px-4 py-2 hover:bg-gray-100 rounded font-bold transition-colors" onClick={() => setIsServicesDropdownOpen(false)}>
+                <Link href="/security" className="flex items-center px-4 py-2 hover:bg-gray-100 rounded font-bold transition-colors" onClick={() => setIsServicesDropdownOpen(false)}>
                   Security system
                 </Link>
               </div>
@@ -128,10 +128,10 @@ const Navbar = () => {
             </button>
             {isMobileServicesDropdownOpen && (
               <div className="flex flex-col space-y-2 pl-4">
-                <Link href="/mainsystem" className="py-2 hover:text-yellow-400 font-bold" onClick={() => { setIsMobileServicesDropdownOpen(false); setIsMobileMenuOpen(false); }}>Main system</Link>
-                <Link href="/service-2" className="py-2 hover:text-yellow-400 font-bold" onClick={() => { setIsMobileServicesDropdownOpen(false); setIsMobileMenuOpen(false); }}>Networking system</Link>
+                <Link href="@/mainsystem" className="py-2 hover:text-yellow-400 font-bold" onClick={() => { setIsMobileServicesDropdownOpen(false); setIsMobileMenuOpen(false); }}>Main system</Link>
+                <Link href="/networksystem" className="py-2 hover:text-yellow-400 font-bold" onClick={() => { setIsMobileServicesDropdownOpen(false); setIsMobileMenuOpen(false); }}>Networking system</Link>
                 <Link href="/service-3" className="py-2 hover:text-yellow-400 font-bold" onClick={() => { setIsMobileServicesDropdownOpen(false); setIsMobileMenuOpen(false); }}>Electrical system</Link>
-                <Link href="/service-4" className="py-2 hover:text-yellow-400 font-bold" onClick={() => { setIsMobileServicesDropdownOpen(false); setIsMobileMenuOpen(false); }}>Security system</Link>
+                <Link href="/security" className="py-2 hover:text-yellow-400 font-bold" onClick={() => { setIsMobileServicesDropdownOpen(false); setIsMobileMenuOpen(false); }}>Security system</Link>
               </div>
             )}
 
