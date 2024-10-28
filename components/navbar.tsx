@@ -84,7 +84,7 @@ const Navbar = () => {
                 <Link href="/service-3" className="flex items-center px-4 py-2 hover:bg-gray-100 rounded transition-colors">
                   <span>Electrical system</span>
                 </Link>
-                <Link href="/service-4" className="flex items-center px-4 py-2 hover:bg-gray-100 rounded transition-colors">
+                <Link href="/security" className="flex items-center px-4 py-2 hover:bg-gray-100 rounded transition-colors">
                   <span>Security system</span>
                 </Link>
               </div>
