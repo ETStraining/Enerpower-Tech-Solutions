@@ -17,22 +17,16 @@ const Navbar = () => {
     setIsDarkMode((prevMode) => {
       const newMode = !prevMode;
       localStorage.setItem("darkMode", JSON.stringify(newMode));
-      document.body.classList.toggle('dark-mode', newMode);
-      document.body.classList.toggle('light-mode', !newMode);
+      document.body.className = newMode ? 'dark-mode' : 'light-mode';
       return newMode;
     });
   };
 
   useEffect(() => {
     const savedDarkMode = localStorage.getItem("darkMode");
-    if (savedDarkMode) {
-      const darkModeEnabled = JSON.parse(savedDarkMode);
-      setIsDarkMode(darkModeEnabled);
-      document.body.classList.toggle('dark-mode', darkModeEnabled);
-      document.body.classList.toggle('light-mode', !darkModeEnabled);
-    } else {
-      document.body.classList.add('light-mode');
-    }
+    const darkModeEnabled = savedDarkMode ? JSON.parse(savedDarkMode) : false;
+    setIsDarkMode(darkModeEnabled);
+    document.body.className = darkModeEnabled ? 'dark-mode' : 'light-mode';
   }, []);
 
   const navbarClasses = `fixed top-0 left-0 w-full px-6 py-4 z-50 transition-all duration-300 ${
@@ -64,7 +58,7 @@ const Navbar = () => {
           <div className="relative">
             <button
               onClick={() => setIsServicesDropdownOpen(!isServicesDropdownOpen)}
-              className="hover:text-yellow-400 flex items-center space-x-1 font-bold transition-colors"
+              className="hover:text-yellow-400 flex items-center space-x-3 font-bold transition-colors"
             >
               <span>SERVICES</span>
               <FontAwesomeIcon icon={faCaretDown} />
@@ -87,10 +81,10 @@ const Navbar = () => {
             )}
           </div>
 
-          <div className="relative">
+          <div className=" flex justify-between">
             <button
               onClick={() => setIsTechnologiesDropdownOpen(!isTechnologiesDropdownOpen)}
-              className="hover:text-yellow-400 flex items-center space-x-1 font-bold transition-colors"
+              className="hover:text-yellow-400 flex items-center space-x-3 font-bold transition-colors mr-16"
             >
               <span>TECHNOLOGY</span>
               <FontAwesomeIcon icon={faCaretDown} />
@@ -106,12 +100,14 @@ const Navbar = () => {
               </div>
             )}
           </div>
+<div>  <Link href="/" className="hover:text-yellow-400 font-bold transition-colors ml-16">CONTACT US</Link></div>
+         
+        </div>
 
-          <Link href="/" className="hover:text-yellow-400 font-bold transition-colors">CONTACT US</Link>
-
+        <div className="flex items-center space-x-6">
           <FontAwesomeIcon
             icon={isDarkMode ? faSun : faMoon}
-            className="text-xl cursor-pointer transition-transform duration-500 text-yellow-400"
+            className="text-xl cursor-pointer text-yellow-400"
             onClick={toggleTheme}
           />
         </div>
@@ -128,7 +124,7 @@ const Navbar = () => {
             </button>
             {isMobileServicesDropdownOpen && (
               <div className="flex flex-col space-y-2 pl-4">
-                <Link href="@/mainsystem" className="py-2 hover:text-yellow-400 font-bold" onClick={() => { setIsMobileServicesDropdownOpen(false); setIsMobileMenuOpen(false); }}>Main system</Link>
+                <Link href="/mainsystem" className="py-2 hover:text-yellow-400 font-bold" onClick={() => { setIsMobileServicesDropdownOpen(false); setIsMobileMenuOpen(false); }}>Main system</Link>
                 <Link href="/networksystem" className="py-2 hover:text-yellow-400 font-bold" onClick={() => { setIsMobileServicesDropdownOpen(false); setIsMobileMenuOpen(false); }}>Networking system</Link>
                 <Link href="/service-3" className="py-2 hover:text-yellow-400 font-bold" onClick={() => { setIsMobileServicesDropdownOpen(false); setIsMobileMenuOpen(false); }}>Electrical system</Link>
                 <Link href="/security" className="py-2 hover:text-yellow-400 font-bold" onClick={() => { setIsMobileServicesDropdownOpen(false); setIsMobileMenuOpen(false); }}>Security system</Link>
@@ -146,7 +142,7 @@ const Navbar = () => {
               </div>
             )}
 
-            <Link href="/footer" className="py-2 text-center hover:text-yellow-400 font-bold" onClick={() => setIsMobileMenuOpen(false)}>CONTACT US</Link>
+            <Link href="/" className="py-2 text-center hover:text-yellow-400 font-bold" onClick={() => setIsMobileMenuOpen(false)}>CONTACT US</Link>
           </div>
         </div>
       )}
