@@ -5,7 +5,7 @@ import Container from '@/components/container';
 const Mainsystem = () => {
   return (
     <Container>
-      <div className="container mx-auto py-16">
+      
         <div className="relative w-full">
 
           
@@ -40,7 +40,7 @@ const Mainsystem = () => {
         </div>
 
         <Footer />
-      </div>
+   
     </Container>
   );
 };
