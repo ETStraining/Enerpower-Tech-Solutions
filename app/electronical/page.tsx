@@ -48,8 +48,8 @@ const ElectricalSystem = () => {
               <span className="ml-1" style={{ fontSize: '28px' }}>Equipping industries with essential tools and equipment for efficient electrical system operation.</span>
             </li>
             <li className="mb-2 flex items-start">
-              <span className="text-2xl mr-2 mt-1">•</span>
-              <b className="text-lg md:text-xl">UPS, Rectifiers, and Batteries:</b>
+              <span className="text-2xl mr-2 mt-1">•</span> 
+              <b className="text-lg md:text-xl">UPS, Rectifiers,and Batteries:</b> 
               <span className="ml-1" style={{ fontSize: '28px' }}>Installing and maintaining uninterruptible power suppliers, rectifiers, and batteries for continuous power and system stability.</span>
             </li>
           </ul>
