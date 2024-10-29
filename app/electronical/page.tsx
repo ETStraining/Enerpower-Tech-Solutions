@@ -10,10 +10,10 @@ const ElectricalSystem = () => {
           width: '1796px',
           height: '581px',
           backgroundImage: 'url("/electrical.png")',
-          backgroundSize: 'cover', // Ensures the image covers the div
-          backgroundRepeat: 'no-repeat', // Prevents the image from repeating
+          backgroundSize: 'cover',
+          backgroundRepeat: 'no-repeat',
           borderRadius: '10px',
-          overflow: 'hidden', 
+          overflow: 'hidden',
         }}
       >
         <div className="absolute inset-0 bg-black opacity-40"></div>
@@ -28,23 +28,23 @@ const ElectricalSystem = () => {
           <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold mb-4">Our Expertise Includes:</h2>
           <ul className="list-none pl-6">
             <li className="mb-2 flex items-start">
-              <span className="text-2xl mr-2 mt-1">•</span> 
-              <b className="text-lg md:text-xl">Transformer:</b> 
+              <span className="text-2xl mr-2 mt-1">•</span>
+              <b className="text-lg md:text-xl">Transformer:</b>
               <span className="ml-1" style={{ fontSize: '28px' }}>Supplying and servicing transformers for safe and efficient energy distribution.</span>
             </li>
             <li className="mb-2 flex items-start">
-              <span className="text-2xl mr-2 mt-1">•</span> 
-              <b className="text-lg md:text-xl">Generator:</b> 
+              <span className="text-2xl mr-2 mt-1">•</span>
+              <b className="text-lg md:text-xl">Generator:</b>
               <span className="ml-1" style={{ fontSize: '28px' }}>Providing installation and maintenance for various generator systems to ensure uninterrupted power supply.</span>
             </li>
             <li className="mb-2 flex items-start">
-              <span className="text-2xl mr-2 mt-1">•</span> 
-              <b className="text-lg md:text-xl">Switch gears:</b> 
+              <span className="text-2xl mr-2 mt-1">•</span>
+              <b className="text-lg md:text-xl">Switch gears:</b>
               <span className="ml-1" style={{ fontSize: '28px' }}>Offering high-quality switch gears to manage electrical power flow and safeguard your system.</span>
             </li>
             <li className="mb-2 flex items-start">
-              <span className="text-2xl mr-2 mt-1">•</span> 
-              <b className="text-lg md:text-xl">Tools and Equipment:</b> 
+              <span className="text-2xl mr-2 mt-1">•</span>
+              <b className="text-lg md:text-xl">Tools and Equipment:</b>
               <span className="ml-1" style={{ fontSize: '28px' }}>Equipping industries with essential tools and equipment for efficient electrical system operation.</span>
             </li>
             <li className="mb-2 flex items-start">

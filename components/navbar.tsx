@@ -71,7 +71,7 @@ const Navbar = () => {
                 <Link href="/networksystem" className="flex items-center px-4 py-2 hover:bg-gray-100 rounded font-bold transition-colors" onClick={() => setIsServicesDropdownOpen(false)}>
                   Networking system
                 </Link>
-                <Link href="/service-3" className="flex items-center px-4 py-2 hover:bg-gray-100 rounded font-bold transition-colors" onClick={() => setIsServicesDropdownOpen(false)}>
+                <Link href="/electronical" className="flex items-center px-4 py-2 hover:bg-gray-100 rounded font-bold transition-colors" onClick={() => setIsServicesDropdownOpen(false)}>
                   Electrical system
                 </Link>
                 <Link href="/security" className="flex items-center px-4 py-2 hover:bg-gray-100 rounded font-bold transition-colors" onClick={() => setIsServicesDropdownOpen(false)}>
@@ -126,7 +126,7 @@ const Navbar = () => {
               <div className="flex flex-col space-y-2 pl-4">
                 <Link href="/mainsystem" className="py-2 hover:text-yellow-400 font-bold" onClick={() => { setIsMobileServicesDropdownOpen(false); setIsMobileMenuOpen(false); }}>Main system</Link>
                 <Link href="/networksystem" className="py-2 hover:text-yellow-400 font-bold" onClick={() => { setIsMobileServicesDropdownOpen(false); setIsMobileMenuOpen(false); }}>Networking system</Link>
-                <Link href="/service-3" className="py-2 hover:text-yellow-400 font-bold" onClick={() => { setIsMobileServicesDropdownOpen(false); setIsMobileMenuOpen(false); }}>Electrical system</Link>
+                <Link href="/electronical" className="py-2 hover:text-yellow-400 font-bold" onClick={() => { setIsMobileServicesDropdownOpen(false); setIsMobileMenuOpen(false); }}>Electrical system</Link>
                 <Link href="/security" className="py-2 hover:text-yellow-400 font-bold" onClick={() => { setIsMobileServicesDropdownOpen(false); setIsMobileMenuOpen(false); }}>Security system</Link>
               </div>
             )}
