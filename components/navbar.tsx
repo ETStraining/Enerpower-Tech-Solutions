@@ -39,7 +39,7 @@ const Navbar = () => {
 
   return (
     <nav>
-      <div className="flex justify-between px-3 md:px-16 shadow-xl h-16 lg:h-20 xl:h-24 2xl:h-20 items-center">
+      <div className="flex justify-between px-3 md:px-16 shadow-xl h-16 lg:h-16 xl:h-20 2xl:h-20 items-center 2xl:px-36">
         <div className="flex items-center">
           <Image
             src="/images/logo.svg"

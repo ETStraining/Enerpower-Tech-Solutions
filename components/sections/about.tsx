@@ -30,18 +30,18 @@ const services = [
 
 const About = () => {
   return (
-    <div className=" mx-auto py-6 items-center sm:align-center  w-full">
+    <div className=" py-6 items-center sm:align-center  w-full">
 
       <Container>
-        <div className="flex items-center justify-center gap-8 mt-6">
+        <div className="flex items-center justify-center gap-8 mt-6 flex-col md:flex-row">
           {
             services.map((service, index) => (
-              <div key={index} className="flex items-center flex-col justify-center w-[23vw] h-[35vh] border-2 border-[#353E5D] rounded-3xl">
+              <div key={index} className="flex items-center flex-col justify-center xl:w-[23vw] xl:h-[35vh] border-2 border-[#353E5D] rounded-3xl py-4 xl:py-0">
                 <div className="w-24 h-15 rounded bg-blue-400 mb-3">
                   <Image src={service.img} alt="Engineer your Solution" width={80} height={80} />
                 </div>
                 <div className="flex justify-center flex-col items-center">
-                  <h3 className="text-xl font-bold text-[#19213D]">{service.title}</h3>
+                  <h3 className="text-xl font-bold text-[#19213D] text-center">{service.title}</h3>
                   <p className="mt-2 text-lg relative text-center px-8 text-[#19213D]">
                     {service.description}
                   </p>
@@ -60,7 +60,7 @@ const About = () => {
           height={400}
           className='w-full h-[50vh] absolute'
         />
-        <div className="bg-blue-600 opacity-70 w-72 px-10 py-5 h-[50vh] rounded-lg text-white">
+        <div className="bg-blue-600 opacity-70 md:w-72 px-10 py-5 h-[50vh] rounded-lg text-white">
           <h1 className='uppercase py-1 border-b-4 border-indigo-400'>Why choose us</h1>
           <div className="mt-4">
             <h1 className='text-3xl font-semibold'>01 </h1>

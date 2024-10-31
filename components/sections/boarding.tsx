@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 const Boarding: React.FC = () => {
   return (
-    <div className="relative flex flex-col sm:flex-row w-full">
+    <div className="relative flex flex-col w-full">
       <Image
         src={"/background.png"}
         alt='background image'
@@ -14,7 +14,7 @@ const Boarding: React.FC = () => {
         className='w-full absolute h-[80vh] mb-20'
       />
       <div className="absolute inset-0 bg-black opacity-30 h-[80vh]" />
-      <div className="relative flex flex-col justify-center items-center w-full p-4 ml-8 sm:ml-12 lg:ml-14 h-[80vh]">
+      <div className="relative flex flex-col justify-center items-center w-full p-4 h-[80vh]">
         <h2
           className="text-xl uppercase sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl mb-4 font-bold text-black dark:text-transparent z-10"
           style={{

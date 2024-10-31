@@ -15,7 +15,7 @@ import Link from "next/link";
 export default function Footer() {
 
     return (
-        <div className={`flex flex-wrap items-center gap-16 justify-center text-lg md:gap-20 2xl:gap-40 py-10 bg-[#19213D] xl:px-28 2xl:justify-between text-white mt-32`}>
+        <div className={`flex flex-wrap items-center gap-16 justify-center text-lg md:gap-20 2xl:gap-40 py-10 bg-[#19213D] xl:px-28 2xl:justify-between text-white mt-32 2xl:px-48`}>
             <div className="flex flex-col items-center">
                 <div className="flex gap-3 pt-3">
                     <a
