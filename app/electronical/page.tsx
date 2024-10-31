@@ -3,11 +3,9 @@ import Container from '@/components/container';
 
 const ElectricalSystem: React.FC = () => {
   return (
-    <div>
+    <div className="flex justify-center">
       <Container>
-        
         <div className="flex flex-col md:flex-row-reverse py-8 px-4 items-center space-y-6 md:space-y-0">
-         
           <div className="flex-1 md:pl-8 text-left">
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-blue-500">
               ELECTRICAL SYSTEM
@@ -36,7 +34,6 @@ const ElectricalSystem: React.FC = () => {
         </div>
 
         <div className="flex flex-col md:flex-row py-8 px-4 items-center space-y-6 md:space-y-0">
-          
           <div className="flex-1 md:pr-8 text-left">
             <ul className="text-base sm:text-lg md:text-xl text-gray-700 space-y-4">
               <li>
