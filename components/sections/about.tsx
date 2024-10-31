@@ -30,60 +30,57 @@ const services = [
 
 const About = () => {
   return (
-    <div className=" mx-auto py-16  sm:px-6 lg:px-8 items-center sm:align-center  w-full">
+    <div className=" mx-auto py-6 items-center sm:align-center  w-full">
 
       <Container>
-        <div className="flex items-center  grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        <div className="flex items-center justify-center gap-8 mt-6">
           {
             services.map((service, index) => (
-                <div key={index} className="flex items-center space-x-6 sm:space-x-6">
-                  <div className="w-24 h-15 rounded bg-yellow-400 flex items-center justify-center">
-                    <Image src={service.img} alt="Engineer your Solution" width={80} height={80}/>
-                  </div>
-                  <div className="text-left">
-                    <h3 className="text-xl font-bold">{service.title}</h3>
-                    <p className="mt-2 text-lg">
-                      {service.description}
-                    </p>
-                  </div>
+              <div key={index} className="flex items-center flex-col justify-center w-[23vw] h-[35vh] border-2 border-[#353E5D] rounded-3xl">
+                <div className="w-24 h-15 rounded bg-blue-400 mb-3">
+                  <Image src={service.img} alt="Engineer your Solution" width={80} height={80} />
                 </div>
+                <div className="flex justify-center flex-col items-center">
+                  <h3 className="text-xl font-bold text-[#19213D]">{service.title}</h3>
+                  <p className="mt-2 text-lg relative text-center px-8 text-[#19213D]">
+                    {service.description}
+                  </p>
+                </div>
+              </div>
             ))
           }
         </div>
       </Container>
 
-
-      <div className="mt-16 text-center">
-        <h2 className="text-center text-3xl font-bold sm:text-4xl">Easy Process</h2>
-        <p className="text-center text-lg mt-4 sm:text-lg mb-16 sm:px-8 max-w-4xl mx-auto">
-          We specialize in helping you build a team of expert developers, testers, and leaders.
-        </p>
-      </div>
-
-      <Container>
-      <div className="max-w-4xl mx-auto grid grid-cols-2 sm:grid-cols-4 gap-8 mt-10 justify-center mb-16 sm:mb-32">
-        <div className="text-center">
-          <Icon className="text-green"/>
-          <h4 className="text-left font-semibold mt-7"> 01 YOU ASK</h4>
-        </div>
-        <div className="text-center">
-         
-          <Icon2 className="text-green"/>
-          <h4 className="text-left font-semibold mt-7"> 02 WE PROCEED</h4>
-        </div>
-        <div className="text-center">
-         
-          <Icon3 className="text-green"/>
-          <h4 className="text-left font-semibold mt-7"> 03 NEGOTIATE</h4>
-        </div>
-        <div className="text-center ">
-          
-          <Icon4 className="text-green"/>
-          <h4 className="text-left font-semibold mt-7"> 04 YOU GET</h4>
+      <div className='mt-20 relative flex justify-center'>
+        <Image
+          src={"/proceed.png"}
+          alt='proceed'
+          width={400}
+          height={400}
+          className='w-full h-[50vh] absolute'
+        />
+        <div className="bg-blue-600 opacity-70 w-72 px-10 py-5 h-[50vh] rounded-lg text-white">
+          <h1 className='uppercase py-1 border-b-4 border-indigo-400'>Why choose us</h1>
+          <div className="mt-4">
+            <h1 className='text-3xl font-semibold'>01 </h1>
+            <h4 className="text-left text-lg"> YOU ASK</h4>
+          </div>
+          <div className='mt-4'>
+            <h1 className='text-3xl font-semibold'> 02</h1>
+            <h4 className="text-left text-lg">WE PROCEED</h4>
+          </div>
+          <div className="mt-4">
+            <h1 className='text-3xl font-semibold'>03</h1>
+            <h4 className="text-left text-lg">NEGOTIATE</h4>
+          </div>
+          <div className="mt-4">
+            <h1 className='text-3xl font-semibold'>04</h1>
+            <h4 className="text-left text-lg"> YOU GET</h4>
+          </div>
         </div>
       </div>
-      </Container>
-      
+
     </div>
   );
 };
