@@ -39,14 +39,14 @@ const Navbar = () => {
 
   return (
     <nav>
-      <div className="flex justify-between px-3 md:px-16 shadow-xl h-16 lg:h-20 xl:h-24 items-center">
+      <div className="flex justify-between px-3 md:px-16 shadow-xl h-16 lg:h-16 xl:h-20 2xl:h-20 items-center 2xl:px-36">
         <div className="flex items-center">
           <Image
             src="/images/logo.svg"
             alt="Logo"
             width={50}
             height={50}
-            className="rounded-full w-16 xl:w-24 h-24 2xl:w-32"
+            className="rounded-full w-16 xl:w-24 h-16 2xl:w-28"
           />
         </div>
 
@@ -56,7 +56,7 @@ const Navbar = () => {
           </button>
         </div>
 
-        <div className={`hidden md:flex items-center text-blue-950 md:text-sm xl:gap-20 2xl:text-lg`}>
+        <div className={`hidden md:flex items-center text-blue-950 md:text-sm xl:gap-20 2xl:text-md 2xl:gap-10`}>
           <Link href="/" className="hover:text-yellow-400 font-bold transition-colors lg:px-4">ABOUT US</Link>
 
           <div className="relative">
@@ -68,7 +68,7 @@ const Navbar = () => {
               <FontAwesomeIcon icon={faCaretDown} />
             </button>
             {isServicesDropdownOpen && (
-              <div className="dropdown-content absolute bg-white text-black mt-2 rounded-lg shadow-lg w-48 p-2 2xl:w-64 z-10">
+              <div className="dropdown-content absolute bg-white text-black mt-2 rounded-lg shadow-lg w-48 p-2 2xl:w-40 z-10">
                 <Link href="/mainsystem" className="flex items-center px-4 py-2 hover:bg-gray-100 rounded font-bold transition-colors" onClick={() => setIsServicesDropdownOpen(false)}>
                   Main system
                 </Link>
@@ -94,7 +94,7 @@ const Navbar = () => {
               <FontAwesomeIcon icon={faCaretDown} />
             </button>
             {isTechnologiesDropdownOpen && (
-              <div className="dropdown-content absolute bg-white text-black mt-6 rounded-lg shadow-lg w-40 p-2  2xl:mt-12">
+              <div className="dropdown-content absolute bg-white text-black mt-6 rounded-lg shadow-lg w-40 p-2  z-10 2xl:mt-12">
                 <Link href="/tech-1" className="flex items-center px-4 py-2 hover:bg-gray-100 rounded font-bold transition-colors" onClick={() => setIsTechnologiesDropdownOpen(false)}>
                   Tech 1
                 </Link>

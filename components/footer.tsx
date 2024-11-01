@@ -15,7 +15,7 @@ import Link from "next/link";
 export default function Footer() {
 
     return (
-        <div className={`flex flex-wrap items-center gap-16 justify-center text-lg md:gap-20 2xl:gap-40 py-10 bg-[#19213D] xl:px-56 2xl:justify-between text-white`}>
+        <div className={`flex flex-wrap items-center gap-16 justify-center text-lg md:gap-20 2xl:gap-40 py-10 bg-[#19213D] xl:px-28 2xl:justify-between text-white mt-32 2xl:px-48`}>
             <div className="flex flex-col items-center">
                 <div className="flex gap-3 pt-3">
                     <a
@@ -54,7 +54,7 @@ export default function Footer() {
                     alt="logo"
                     width={100}
                     height={100}
-                    className="w-[8rem] h-[8rem] 2xl:w-[14rem] 2xl:h-[12rem] mt-10"
+                    className="w-[8rem] h-[8rem] 2xl:w-[10rem] 2xl:h-[10rem] mt-10"
                 />
             </div>
 
@@ -62,13 +62,13 @@ export default function Footer() {
                 <div className="flex flex-col gap-7">
                     <h2 className="font-semibold 2xl:text-3xl 2xl:pb-5">MENU</h2>
                     <div className="flex gap-16">
-                        <div className="flex flex-col gap-4 2xl:gap-10">
+                        <div className="flex flex-col gap-4 2xl:gap-6">
                             <Link href="/">Home</Link>
                             <Link href="/public">Projects</Link>
                             <Link href="/public">News</Link>
                         </div>
 
-                        <div className="flex flex-col gap-4 2xl:gap-10">
+                        <div className="flex flex-col gap-4 2xl:gap-6">
                             <Link href={"/"}>About</Link>
                             <Link href={"/"}>Courtsel</Link>
                             <Link href={"/"}>Apply</Link>
