@@ -75,7 +75,7 @@ const Navbar = () => {
             </button>
             {isServicesDropdownOpen && (
               <div className="absolute bg-white text-black mt-2 rounded-lg shadow-lg w-48 p-2">
-                <Link href="/service-1" className="flex items-center px-4 py-2 hover:bg-gray-100 rounded transition-colors">
+                <Link href="/mainservices" className="flex items-center px-4 py-2 hover:bg-gray-100 rounded transition-colors">
                   <span>Main system</span>
                 </Link>
                 <Link href="/service-2" className="flex items-center px-4 py-2 hover:bg-gray-100 rounded transition-colors">
