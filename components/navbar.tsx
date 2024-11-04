@@ -12,34 +12,32 @@ const Navbar = () => {
   const [isMobileServicesDropdownOpen, setIsMobileServicesDropdownOpen] = useState(false);
   const [isMobileTechnologiesDropdownOpen, setIsMobileTechnologiesDropdownOpen] = useState(false);
 
-  useEffect(()=>{
-    const handleOutsideClick = (e:MouseEvent)=>{
-      const target = e.target as HTMLElement
-      if(!target.closest('.dropdown-button')&& !target.closest(".dropdown-content")){
+  useEffect(() => {
+    const handleOutsideClick = (e: MouseEvent) => {
+      const target = e.target as HTMLElement;
+      if (!target.closest('.dropdown-button') && !target.closest(".dropdown-content")) {
         setIsServicesDropdownOpen(false);
-        setIsTechnologiesDropdownOpen(false)
+        setIsTechnologiesDropdownOpen(false);
       }
     };
 
     document.addEventListener('click', handleOutsideClick);
-    return ()=> document.removeEventListener("click", handleOutsideClick)
-  },[])
+    return () => document.removeEventListener("click", handleOutsideClick);
+  }, []);
 
   const handleServicesClick = () => {
     setIsServicesDropdownOpen(!isServicesDropdownOpen);
-    setIsTechnologiesDropdownOpen(false); 
+    setIsTechnologiesDropdownOpen(false);
   };
 
   const handleTechnologiesClick = () => {
     setIsTechnologiesDropdownOpen(!isTechnologiesDropdownOpen);
-    setIsServicesDropdownOpen(false)
+    setIsServicesDropdownOpen(false);
   };
 
-
-
   return (
-    <nav>
-      <div className="flex justify-between px-3 md:px-16 shadow-xl h-16 lg:h-16 xl:h-20 2xl:h-20 items-center 2xl:px-36">
+    <nav className="fixed top-0 left-0 w-full bg-white shadow-md z-50">
+      <div className="flex justify-between px-3 md:px-16 h-16 items-center 2xl:px-36">
         <div className="flex items-center">
           <Image
             src="/images/logo.svg"
@@ -52,7 +50,7 @@ const Navbar = () => {
 
         <div className="md:hidden">
           <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="lg:text-xl">
-            <FontAwesomeIcon icon={isMobileMenuOpen ? faTimes : faBars} fontSize={30}/>
+            <FontAwesomeIcon icon={isMobileMenuOpen ? faTimes : faBars} fontSize={30} />
           </button>
         </div>
 
@@ -68,11 +66,9 @@ const Navbar = () => {
               <FontAwesomeIcon icon={faCaretDown} />
             </button>
             {isServicesDropdownOpen && (
-
               <div className="absolute bg-white text-black mt-2 rounded-lg shadow-lg w-48 p-2">
-                <Link href="/mainservices" className="flex items-center px-4 py-2 hover:bg-gray-100 rounded transition-colors">
+                <Link href="/mainservices" className="flex items-center px-4 py-2 hover:bg-gray-100 rounded font-bold transition-colors">
                   <span>Main system</span>
-
                 </Link>
                 <Link href="/networksystem" className="flex items-center px-4 py-2 hover:bg-gray-100 rounded font-bold transition-colors" onClick={() => setIsServicesDropdownOpen(false)}>
                   Networking system
@@ -87,16 +83,16 @@ const Navbar = () => {
             )}
           </div>
 
-          <div className=" flex justify-between">
+          <div className="relative">
             <button
               onClick={handleTechnologiesClick}
               className="dropdown-button hover:text-yellow-400 flex items-center font-bold transition-colors px-4"
             >
-              <span className='mr-3'>TECHNOLOGY</span>
+              <span className="mr-3">TECHNOLOGY</span>
               <FontAwesomeIcon icon={faCaretDown} />
             </button>
             {isTechnologiesDropdownOpen && (
-              <div className="dropdown-content absolute bg-white text-black mt-6 rounded-lg shadow-lg w-40 p-2  z-10 2xl:mt-12">
+              <div className="dropdown-content absolute bg-white text-black mt-6 rounded-lg shadow-lg w-40 p-2 z-10">
                 <Link href="/tech-1" className="flex items-center px-4 py-2 hover:bg-gray-100 rounded font-bold transition-colors" onClick={() => setIsTechnologiesDropdownOpen(false)}>
                   Tech 1
                 </Link>
@@ -106,14 +102,14 @@ const Navbar = () => {
               </div>
             )}
           </div>
+
           <Link href="/" className="hover:text-yellow-400 font-bold transition-colors px-4">CONTACT US</Link>
           <Link href="/" className="hover:text-yellow-400 font-bold transition-colors px-4">APPLY</Link>
-
         </div>
       </div>
 
       {isMobileMenuOpen && (
-        <div className={`md:hidden mt-4 p-4 rounded-lg shadow-lg absolute bg-white z-10 w-full flex justify-center`}>
+        <div className="md:hidden mt-4 p-4 rounded-lg shadow-lg absolute bg-white z-10 w-full flex justify-center">
           <div className="flex flex-col space-y-2">
             <Link href="/" className="py-2 text-center hover:text-yellow-400 font-bold" onClick={() => setIsMobileMenuOpen(false)}>ABOUT US</Link>
 
