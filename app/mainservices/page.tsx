@@ -5,7 +5,7 @@ const Mainsystem = () => {
   return (
     <>
       <div className='px-4 lg:px-16 '>
-        <div className='py-32'>
+        <div className='py-32 ml-20'>
           <h1 className="font-bold text-blue-900 text-4xl border-b-2 border-slate-200 pb-5 w-72  ">
             MAIN SYSTEM
           </h1>
@@ -22,7 +22,7 @@ const Mainsystem = () => {
           </p>
         </div>
 
-        <div className='grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2'>
+        <div className='grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 px-16'>
           <div className="mb-4 p-4  w-full h-full">
             <Image
               src="/camera.png"
