@@ -1,59 +1,44 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
-import Container from "../container";
+import Image from 'next/image';
 
 const Boarding: React.FC = () => {
   return (
-    <Container>
-      <div className="relative flex flex-col sm:flex-row items-start pt-40" style={{ width: '100%', margin: '0 auto' }}>
-        <div className="relative flex flex-col sm:flex-row w-full">
-          
-          <div className="relative flex flex-col w-full sm:w-1/2 p-4 ml-8 sm:ml-12 lg:ml-14">
-            <h2
-              className="text-xl uppercase sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl mb-4 font-bold text-black dark:text-transparent"
-              style={{
-                backgroundColor: "grey",
-                backgroundImage: "url('/est.png')", 
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                position: 'relative',
-                WebkitFontSmoothing: 'antialiased',
-              }}
-            >
-              Technology
-              <br />Design&nbsp;Build&nbsp;& <br />
-              Customer <br /> Experience <br /> Experts.
-            </h2>
-
-            <div className="flex justify-start mt-4">
-              <button
-                className="flex items-center bg-blue-500 text-white font-semibold rounded-lg mt-6"
-                style={{ height: '48px', width: '160px', fontSize: '14px' }}
-              >
-                <span className="text-xs ml-6">Build a Team</span>
-                <FontAwesomeIcon icon={faArrowRight} className="text-3xl" style={{ height: '12px', width: '24px' }} />
-              </button>
-            </div>
-          </div>
-
-          <div className="relative w-full sm:w-1/2 flex justify-start mt-2 sm:mt-0">
-            <img
-              src="/Rectangle%2026.png"
-              alt="Description of the picture"
-              className="rounded-lg shadow-md opacity-80"
-              style={{
-                maxHeight: '500px',
-                width: '100%',
-                height: 'auto',
-              }}
-            />
-          </div>
-        </div>
+    <div className="relative flex flex-col w-full">
+      <Image
+        src={"/background.png"}
+        alt='background image'
+        width={400}
+        height={400}
+        className='w-full absolute h-[80vh] mb-20'
+      />
+      <div className="absolute inset-0 bg-black opacity-30 h-[80vh]" />
+      <div className="relative flex flex-col justify-center items-center w-full p-4 h-[80vh]">
+        <h2
+          className="text-xl uppercase sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl mb-4 font-bold text-black dark:text-transparent z-10"
+          style={{
+            backgroundColor: "white",
+            backgroundImage: "url('/est.png')",
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+            position: 'relative',
+            WebkitFontSmoothing: 'antialiased',
+          }}
+        >
+          Technology Design Build & <br/> Customer Experience  Experts.
+        </h2>
+        <button
+            className="flex items-center bg-blue-500 text-white font-semibold rounded-lg mt-6 z-10"
+            style={{ height: '48px', width: '160px', fontSize: '14px' }}
+          >
+            <span className="text-xs ml-6">Build a Team</span>
+            <FontAwesomeIcon icon={faArrowRight} className="text-3xl" style={{ height: '12px', width: '24px' }} />
+          </button>
       </div>
-    </Container>
+    </div>
   );
 };
 
