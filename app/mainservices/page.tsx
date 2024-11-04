@@ -6,7 +6,7 @@ const Mainsystem = () => {
     <>
       <div className='px-4 lg:px-16 '>
         <div className='py-32 ml-20'>
-          <h1 className="font-bold text-blue-700 text-4xl border-b-2 border-slate-200 pb-5 w-72  ">
+          <h1 className="font-bold text-blue-800 text-4xl border-b-2 border-slate-200 pb-5 w-72  ">
             MAIN SYSTEM
           </h1>
 
