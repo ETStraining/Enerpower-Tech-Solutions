@@ -1,6 +1,7 @@
 import React from "react";
 import type { Metadata } from "next";
 import Navbar from "@/components/navbar";
+import Footer from '@/components/footer'
 import { Poppins } from "next/font/google";
 import "./globals.css";
 
@@ -19,8 +20,8 @@ const baseUrl = process.env.ETS_PUBLIC_VERCEL_URL
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: {
-    default: SITE_NAME || 'Default Site Name',
-    template: `%s | ${SITE_NAME || 'Default Site Name'}`,
+    default: SITE_NAME || 'EnerPower Tech Solution',
+    template: `%s | ${SITE_NAME || 'EnerPower Tech Solution'}`,
   },
   description: 'Enabling power across Rwanda Offering network, Electrical solutions and software applications for your businesses.',
   robots: {
@@ -43,7 +44,7 @@ export default function RootLayout({
         <main>
           {children}
         </main>
-     
+     <Footer/>
       </body>
     </html>
   );

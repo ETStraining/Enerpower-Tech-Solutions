@@ -10,7 +10,6 @@ export default function Home() {
         <Boarding />
         <About />
         <Mission/>
-        <Footer />
     </div>
   );
 }
