@@ -54,9 +54,6 @@ const NetworkingServices: React.FC = () => {
         </div>
       </div>
 
-      <div className="mt-auto w-full">
-  <Footer />
-</div>
 
     </div>
   );

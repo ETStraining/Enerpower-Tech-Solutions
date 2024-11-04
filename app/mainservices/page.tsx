@@ -66,7 +66,6 @@ const Mainsystem = () => {
         </div>
       </div>
 
-      <Footer />
     </>
   );
 };

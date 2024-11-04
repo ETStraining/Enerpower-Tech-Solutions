@@ -60,7 +60,7 @@ export default function SecuritySystem() {
                         monitoring for your business environment.
                     </p>
                 </div>
-                <Footer />
+              
             </Container>
         </>
     )
