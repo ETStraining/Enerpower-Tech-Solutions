@@ -55,7 +55,7 @@ const ElectricalSystem: React.FC = () => {
             <div
               className="relative rounded-lg overflow-hidden w-full h-52 sm:h-64 md:h-80 lg:h-96"
               style={{
-                backgroundImage: 'url("/networkcable.jpg")',
+                backgroundImage: 'url("installation.png")',
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
               }}

@@ -6,7 +6,7 @@ const Container: FC<{ children: React.ReactNode }> = ({ children }) => {
 
 
   return (
-    <div className={`container px-16`}>
+    <div className={`container mx-auto px-4`}>
       {children}
     </div>
   );
