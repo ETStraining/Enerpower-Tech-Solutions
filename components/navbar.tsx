@@ -68,9 +68,11 @@ const Navbar = () => {
               <FontAwesomeIcon icon={faCaretDown} />
             </button>
             {isServicesDropdownOpen && (
-              <div className="dropdown-content absolute bg-white text-black mt-2 rounded-lg shadow-lg w-48 p-2 2xl:w-40 z-10">
-                <Link href="/mainsystem" className="flex items-center px-4 py-2 hover:bg-gray-100 rounded font-bold transition-colors" onClick={() => setIsServicesDropdownOpen(false)}>
-                  Main system
+
+              <div className="absolute bg-white text-black mt-2 rounded-lg shadow-lg w-48 p-2">
+                <Link href="/mainservices" className="flex items-center px-4 py-2 hover:bg-gray-100 rounded transition-colors">
+                  <span>Main system</span>
+
                 </Link>
                 <Link href="/networksystem" className="flex items-center px-4 py-2 hover:bg-gray-100 rounded font-bold transition-colors" onClick={() => setIsServicesDropdownOpen(false)}>
                   Networking system
