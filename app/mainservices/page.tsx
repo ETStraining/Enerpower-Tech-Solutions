@@ -6,7 +6,7 @@ const Mainsystem = () => {
     <>
       <div className='px-4 lg:px-16 '>
         <div className='py-32 ml-20'>
-          <h1 className="font-bold text-blue-700 text-4xl border-b-2 border-slate-200 pb-5 w-72  ">
+          <h1 className="font-bold text-blue-900 text-4xl border-b-2 border-slate-200 pb-5 w-72  ">
             MAIN SYSTEM
           </h1>
 
@@ -32,8 +32,8 @@ const Mainsystem = () => {
               height={1200}
               className="w-full h-auto"
             />
-            <h1 className='font-bold text-blue-900 mt-5 text-center '> SUPPLY OF MATERIALS,</h1>
-            <h1 className='font-bold text-blue-900 text-center mb-5'>EQUIPMENT, AND TOOLS</h1>
+            <h1 className='font-bold text-slate-600 mt-5 text-center '> SUPPLY OF MATERIALS,</h1>
+            <h1 className='font-bold text-slate-600 text-center mb-5'>EQUIPMENT, AND TOOLS</h1>
             <p className='text-slate-600'>Ensures the consistent availability of high-quality materials and equipment necessary for operational efficiency, with a streamlined process for sourcing and supplying required items.</p>
           </div>
 
@@ -46,7 +46,7 @@ const Mainsystem = () => {
               height={700}
               className="w-full h-auto"
             />
-            <h1 className='font-bold text-blue-900 mt-5 text-center mb-2'> INSTALLATION SERVICES </h1>
+            <h1 className='font-bold text-slate-600 mt-5 text-center mb-2'> INSTALLATION SERVICES </h1>
             <p className='text-slate-600'>Offers professional installation of various systems and equipment, ensuring that all installations meet industry standards and function reliably from day one. Our skilled technicians ensure a safe, efficient setup tailored to each client's needs.</p>
           </div>
 
@@ -59,8 +59,8 @@ const Mainsystem = () => {
               height={700}
               className="w-full h-auto"
             />
-            <h1 className='font-bold text-blue-900 mt-5 '> PREVENTIVE MAINTENANCE AND </h1>
-            <h1 className='font-bold text-blue-900 mb-2'>  REPAIR SERVICES</h1>
+            <h1 className='font-bold text-slate-600 mt-5 '> PREVENTIVE MAINTENANCE AND </h1>
+            <h1 className='font-bold text-slate-600 mb-2'>  REPAIR SERVICES</h1>
             <p className='text-slate-600'>Conducts routine maintenance and timely repairs to prevent breakdowns, extending the lifespan of assets and minimizing downtime through proactive service schedules.</p>
           </div>
         </div>
