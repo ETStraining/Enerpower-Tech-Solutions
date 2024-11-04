@@ -1,7 +1,6 @@
 import React from 'react';
 import Container from '@/components/container';
 
-
 const ElectricalSystem: React.FC = () => {
   return (
     <div className="flex justify-center">
