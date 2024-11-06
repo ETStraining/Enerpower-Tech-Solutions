@@ -4,7 +4,7 @@ import Footer from '@/components/footer';
 
 const NetworkingServices: React.FC = () => {
   return (
-    <div className="flex flex-col min-h-screen bg-gray-100">
+    <div className="flex flex-col min-h-screen ">
       
       <div className="flex flex-col md:flex-row items-center md:items-start p-6 md:p-10 flex-grow">
         <div className="flex flex-col md:flex-row items-start justify-center w-full max-w-screen-lg mx-auto py-10 my-8 md:my-10">
