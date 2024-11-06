@@ -49,6 +49,7 @@ export default function Footer() {
                         <CgYoutube fontSize={25} color={'white'} />
                     </a>
                 </div>
+                
                 <Image
                     src="/images/logo.svg"
                     alt="logo"

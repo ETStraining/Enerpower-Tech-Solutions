@@ -1,59 +1,68 @@
 import React from 'react';
 import Container from '@/components/container';
 
-const ElectricalSystem = () => {
+const ElectricalSystem: React.FC = () => {
   return (
-    <div>
-      <div
-        className="relative"
-        style={{
-          width: '1796px',
-          height: '581px',
-          backgroundImage: 'url("/electrical.png")',
-          backgroundSize: 'cover',
-          backgroundRepeat: 'no-repeat',
-          borderRadius: '10px',
-          overflow: 'hidden',
-        }}
-      >
-        <div className="absolute inset-0 bg-black opacity-40"></div>
-        <div className="relative text-center text-white px-4 h-full flex flex-col justify-center items-center">
-          <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-2 drop-shadow-md">ELECTRICAL SYSTEM</h1>
-          <p className="text-base md:text-lg lg:text-2xl drop-shadow-sm">We specialize in delivering reliable and <br /> comprehensive electrical power solutions.</p>
-        </div>
-      </div>
-
+    <div className="flex justify-center">
       <Container>
-        <div className="py-10 px-4">
-          <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold mb-4">Our Expertise Includes:</h2>
-          <ul className="list-none pl-6">
-            <li className="mb-2 flex items-start">
-              <span className="text-2xl mr-2 mt-1">•</span>
-              <b className="text-lg md:text-xl">Transformer:</b>
-              <span className="ml-1" style={{ fontSize: '28px' }}>Supplying and servicing transformers for safe and efficient energy distribution.</span>
-            </li>
-            <li className="mb-2 flex items-start">
-              <span className="text-2xl mr-2 mt-1">•</span>
-              <b className="text-lg md:text-xl">Generator:</b>
-              <span className="ml-1" style={{ fontSize: '28px' }}>Providing installation and maintenance for various generator systems to ensure uninterrupted power supply.</span>
-            </li>
-            <li className="mb-2 flex items-start">
-              <span className="text-2xl mr-2 mt-1">•</span>
-              <b className="text-lg md:text-xl">Switch gears:</b>
-              <span className="ml-1" style={{ fontSize: '28px' }}>Offering high-quality switch gears to manage electrical power flow and safeguard your system.</span>
-            </li>
-            <li className="mb-2 flex items-start">
-              <span className="text-2xl mr-2 mt-1">•</span>
-              <b className="text-lg md:text-xl">Tools and Equipment:</b>
-              <span className="ml-1" style={{ fontSize: '28px' }}>Equipping industries with essential tools and equipment for efficient electrical system operation.</span>
-            </li>
-            <li className="mb-2 flex items-start">
-              <span className="text-2xl mr-2 mt-1">•</span> 
-              <b className="text-lg md:text-xl">UPS, Rectifiers,and Batteries:</b> 
-              <span className="ml-1" style={{ fontSize: '28px' }}>Installing and maintaining uninterruptible power suppliers, rectifiers, and batteries for continuous power and system stability.</span>
-            </li>
-          </ul>
-          <h2 className="mt-4 text-lg md:text-xl lg:text-2xl">With our solutions, we ensure reliable, efficient, and sustainable energy systems for your operations.</h2>
+        <div className="flex flex-col md:flex-row-reverse py-8 px-4 items-center space-y-6 md:space-y-0">
+          <div className="flex-1 md:pl-8 text-left">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-blue-500">
+              ELECTRICAL SYSTEM
+            </h1>
+            <hr className="my-4" />
+            <p className="text-base sm:text-lg md:text-xl mb-4 text-gray-700">
+              <b>• Transformer:</b> Supplying and servicing transformers for safe and efficient energy distribution.
+            </p>
+            <p className="text-base sm:text-lg md:text-xl mb-4 text-gray-700">
+              <b>• Generator:</b> Providing installation and maintenance for various generator systems to ensure uninterrupted power supply.
+            </p>
+          </div>
+
+          <div className="flex-1 w-full max-w-md md:max-w-full">
+            <div
+              className="relative rounded-lg overflow-hidden mt-10 sm:mt-14 md:mt-20 w-full h-52 sm:h-64 md:h-80 lg:h-96"
+              style={{
+                backgroundImage: 'url("/electrical.png")',
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+              }}
+            >
+              <div className="absolute inset-0 bg-black opacity-40"></div>
+            </div>
+          </div>
+        </div>
+
+        <div className="flex flex-col md:flex-row py-8 px-4 items-center space-y-6 md:space-y-0">
+          <div className="flex-1 md:pr-8 text-left">
+            <ul className="text-base sm:text-lg md:text-xl text-gray-700 space-y-4">
+              <li>
+                <b>• Switch gears:</b> Offering high-quality switch gears to manage electrical power flow and safeguard your system.
+              </li>
+              <li>
+                <b>• Tools and Equipment:</b> Equipping industries with essential tools and equipment for efficient electrical system operation.
+              </li>
+              <li>
+                <b>• UPS, Rectifiers, and Batteries:</b> Installing and maintaining uninterruptible power supplies, rectifiers, and batteries for continuous power and system stability.
+              </li>
+            </ul>
+            <p className="mt-4 text-base sm:text-lg md:text-xl text-gray-700">
+              With our solutions, we ensure reliable, efficient, and sustainable energy systems for your operations.
+            </p>
+          </div>
+
+          <div className="flex-1 w-full max-w-md md:max-w-full">
+            <div
+              className="relative rounded-lg overflow-hidden w-full h-52 sm:h-64 md:h-80 lg:h-96"
+              style={{
+                backgroundImage: 'url("installation.png")',
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+              }}
+            >
+              <div className="absolute inset-0 bg-black opacity-40"></div>
+            </div>
+          </div>
         </div>
       </Container>
     </div>
