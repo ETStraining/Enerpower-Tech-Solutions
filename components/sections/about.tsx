@@ -30,7 +30,7 @@ const services = [
 
 const About = () => {
   return (
-    <div className=" py-6 items-center sm:align-center  w-full">
+    <div>
 
       <Container>
         <div className="flex items-center justify-center gap-8 mt-6 flex-col md:flex-row">
