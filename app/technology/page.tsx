@@ -1,4 +1,4 @@
-// pages/index.tsx
+
 
 import Image from "next/image";
 import React from "react";
@@ -6,7 +6,7 @@ import React from "react";
 const HomePage: React.FC = () => {
   return (
     <div className="container mx-auto  px-4 md:px-8 grid grid-cols-12 gap-4">
-      {/* Top Section */}
+     
       <section className="col-span-12 md:col-span-8 lg:col-span-7">
         <h1 className="text-3xl font-bold mb-4" style={{ color: "#1A479E" }}>
           Technologies
@@ -21,7 +21,7 @@ const HomePage: React.FC = () => {
       </section>
       <div className="col-span-12 md:col-span-4 lg:col-span-5">
         <Image
-          src="/ImageReplace.png" // Replace with actual image path
+          src="/ImageReplace.png" 
           alt="Smartphone Image"
           width={500}
           height={500}
@@ -29,10 +29,10 @@ const HomePage: React.FC = () => {
         />
       </div>
 
-      {/* Divider Before Bottom Section */}
+      
       <hr className="w-[1106px] h-0 border-t border-gray-300 my-8" />
 
-      {/* Testimonials Section */}
+    
       <section className="col-span-12">
         <h2 className="text-2xl font-bold mb-4" style={{ color: "#1A479E" }}>
           Testimonials
@@ -46,7 +46,7 @@ const HomePage: React.FC = () => {
             >
               <div className="w-24 h-24 mx-auto mb-4">
                 <Image
-                  src={`/testmo.jpg`} // Replace with actual member image paths
+                  src={`/testmo.jpg`} 
                   alt={`Member ${item}`}
                   width={96}
                   height={96}
