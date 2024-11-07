@@ -1,95 +1,101 @@
 "use client";
 import Image from "next/image";
-import { CiLinkedin, CiFacebook } from "react-icons/ci";
-import { FaInstagram } from "react-icons/fa6";
+import {
+    FaInstagram,
+    FaLinkedinIn,
+    FaFacebookF,
+} from "react-icons/fa6";
 import { LiaTwitterSquare } from "react-icons/lia";
 import { CgYoutube } from "react-icons/cg";
+import { IoCall } from "react-icons/io5";
+import { MdEmail } from "react-icons/md";
+import { FaTelegramPlane } from "react-icons/fa";
 import Link from "next/link";
-import Container from "./container";
-import { useState, useEffect } from "react";
 
 export default function Footer() {
-    const [isDarkMode, setIsDarkMode] = useState(false);
 
-    useEffect(() => {
-        const savedTheme = localStorage.getItem("darkMode")
-        if (savedTheme) {
-            const darkModeEnabled = JSON.parse(savedTheme);
-            setIsDarkMode(darkModeEnabled);
-            document.body.classList.toggle('dark-mode', darkModeEnabled);
-            document.body.classList.toggle('light-mode', !darkModeEnabled);
-        } else {
-            document.body.classList.add('light-mode');
-
-        }
-    }, [])
     return (
-        <Container>
-            <div className={`flex flex-wrap items-center justify-between text-lg md:gap-20 md:flex-wrap lg:gap-40 py-10 `}>
-                <div className="text-sm md:text-lg">
-                    <Image
-                        src="/images/logo.svg"
-                        alt="logo"
-                        width={100}
-                        height={100}
-                        className="w-[12rem] h-[18rem]"
-                    />
-                    <p className="pb-7">
-                        Expertly trained, battle-tested,
-                        elite<br /> software developers on demand
-                    </p>
+        <div className={`flex flex-wrap items-center gap-16 justify-center text-lg md:gap-20 2xl:gap-40 py-10 bg-[#19213D] xl:px-28 2xl:justify-between text-white mt-32 2xl:px-48`}>
+            <div className="flex flex-col items-center">
+                <div className="flex gap-3 pt-3">
+                    <a
+                        href="https://www.linkedin.com/company/enerpower-tech-solutions/"
+                        target="_blank"
+                        className="bg-blue-800 p-1 rounded-md">
+                        <FaLinkedinIn fontSize={25} color={'white'} />
+                    </a>
+                    <a
+                        href="#"
+                        className="bg-blue-800 p-1 rounded-md"
+                    >
+                        <FaFacebookF fontSize={25} color={'white'} />
+                    </a>
+                    <a
+                        href="#"
+                        className="bg-blue-800 p-1 rounded-md"
+                    >
+                        <FaInstagram fontSize={25} color={'white'} />
+                    </a>
+                    <a
+                        href="#"
+                        className="bg-blue-800 p-1 rounded-md"
+                    >
+                        <LiaTwitterSquare fontSize={25} color={'white'} />
+                    </a>
+                    <a
+                        href="#"
+                        className="bg-blue-800 p-1 rounded-md"
+                    >
+                        <CgYoutube fontSize={25} color={'white'} />
+                    </a>
+                </div>
+                
+                <Image
+                    src="/images/logo.svg"
+                    alt="logo"
+                    width={100}
+                    height={100}
+                    className="w-[8rem] h-[8rem] 2xl:w-[10rem] 2xl:h-[10rem] mt-10"
+                />
+            </div>
+
+            <div className="text-xl lg:text-md">
+                <div className="flex flex-col gap-7">
+                    <h2 className="font-semibold 2xl:text-3xl 2xl:pb-5">MENU</h2>
+                    <div className="flex gap-16">
+                        <div className="flex flex-col gap-4 2xl:gap-6">
+                            <Link href="/">Home</Link>
+                            <Link href="/public">Projects</Link>
+                            <Link href="/public">News</Link>
+                        </div>
+
+                        <div className="flex flex-col gap-4 2xl:gap-6">
+                            <Link href={"/"}>About</Link>
+                            <Link href={"/"}>Courtsel</Link>
+                            <Link href={"/"}>Apply</Link>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="flex flex-col gap-7 justify-center">
+                <h2 className="font-semibold text-center md:text-start 2xl:text-3xl 2xl:pb-5">CONTACT</h2>
+                <div className="text-sm md:text-xl lg:text-md">
                     <div className="flex gap-4 items-end pb-7">
+                        <IoCall fontSize={25} color="white" />
                         Tel +250 788 781 418
                     </div>
 
                     <div className="flex gap-4 items-end pb-7">
+                        <MdEmail fontSize={25} />
                         enerpowertechsolutionsltd@gmail.com
                     </div>
 
-                    <h3 className="pb-4">Follow us</h3>
-                    <div className="flex gap-3 pt-3">
-                        <a href="https://www.linkedin.com/company/enerpower-tech-solutions/" target="_blank" >
-                            <CiLinkedin fontSize={35} color={isDarkMode ? 'white' : 'black'} />
-                        </a>
-                        <a href="#">
-                            <CiFacebook fontSize={35} color={isDarkMode ? 'white' : 'black'} />
-                        </a>
-                        <a href="#">
-                            <FaInstagram fontSize={35} color={isDarkMode ? 'white' : 'black'} />
-                        </a>
-                        <a href="#">
-                            <LiaTwitterSquare fontSize={35} color={isDarkMode ? 'white' : 'black'} />
-                        </a>
-                        <a href="#">
-                            <CgYoutube fontSize={35} color={isDarkMode ? 'white' : 'black'} />
-                        </a>
+                    <div className="flex gap-4 items-end pb-7">
+                        <FaTelegramPlane fontSize={25} color="white" />
+                        587 Kozey Lane, Darestad 44661-2848
                     </div>
                 </div>
-
-                <div className="flex flex-col gap-7 mt-20">
-                    <h2 className="font-semibold pb-5">Company</h2>
-                    <Link href="/public">About us</Link>
-                    <Link href="/public">Privacy policy</Link>
-                    <Link href="/public">Terms & consitions</Link>
-                    <Link href="/public">Contact us</Link>
-                </div>
-
-                <div className="flex flex-col gap-7 mt-20">
-                    <h2 className="font-semibold pb-5">Services</h2>
-                    <p>Main Services</p>
-                    <p>Electrical System</p>
-                    <p>Networking System</p>
-                    <p>Security System</p>
-                </div>
-
-                <div className="flex flex-col gap-7 mt-20">
-                    <h2 className="font-semibold pb-5">How to Start</h2>
-                    <p>You asked</p>
-                    <p>We proceed</p>
-                    <p>Negotiate</p>
-                    <p>You get</p>
-                </div>
             </div>
-        </Container>
+        </div>
     );
 }
