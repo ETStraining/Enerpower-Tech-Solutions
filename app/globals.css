@@ -2,21 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
-/* styles/globals.css */
+/* globals.css */
 
+/* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set a base font size and font family */
 body {
-    transition: background-color 0.3s, color 0.3s;
-  }
-  
-  body.light-mode {
-    background-color: white;
-    color: black;
-  }
-  
-  body.dark-mode {
-    background-color: black; /* Dark background */
-    color: white; /* Light text */
-  }
-  
-  /* Additional styles for other sections */
+  font-size: 16px; /* Set a base font size */
+  font-family: 'Poppins', sans-serif; /* Use the Poppins font */
+  background-color: white; /* Ensure background color is white */
+  line-height: 1.5; /* Set line height for better readability */
+}
+
+/* You can also target specific elements if you need to apply the same font size to headings, paragraphs, etc. */
+h1, h2, h3, h4, h5, h6, p, a, span {
+  font-size: 16px; /* Set the same font size for all text elements */
+}
+
   

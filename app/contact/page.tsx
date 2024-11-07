@@ -108,7 +108,7 @@ const Contact = () => {
                             </div>
                             <div>
                             <p className="text-sm  ml-4 font-bold">Privacy Policy</p></div>
-                            <button className="w-20 bg-gradient-to-r from-blue-500 via-indigo-500 to-yellow-500 text-white py-3 rounded-md font-bold hover:bg-blue-600 transition">
+                            <button className="align-center w-20 bg-blue-500 hover:bg-blue-400 text-white py-3 rounded-md font-bold hover:bg-blue-600 transition">
                                 GET IN
                             </button>
                         </form>
