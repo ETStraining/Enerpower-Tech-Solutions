@@ -12,7 +12,7 @@ export default function NotificationPopup() {
   };
 
   const handleApply = () => {
-    router.push('/technology'); // Navigates to '/technology'
+    router.push('/tech'); // Navigates to '/technology'
   };
 
   useEffect(() => {

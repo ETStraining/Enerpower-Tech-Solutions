@@ -6,23 +6,23 @@ const Mainsystem = () => {
     <>
       <div className="px-4 md:px-8 lg:px-16">
         <div className="py-12 md:py-20 md:ml-0 lg:ml-20">
-          <h1 className="text-blue-600 text-xl md:text-2xl pt-4 md:pt-8 font-bold mb-4">
+          <h1 className="text-blue-600 text-xl md:text-2xl pt-4 md:pt-8 font-bold mb-4 animate__animated animate__fadeIn">
             MAIN SYSTEM
           </h1>
 
-          <p className="text-slate-600 mt-4 text-sm md:text-base">
+          <p className="text-slate-600 mt-4 text-sm md:text-base animate__animated animate__fadeIn animate__delay-1s">
             We specialize in supplying materials, equipment, and tools, along
           </p>
-          <p className="text-slate-600 text-sm md:text-base">
+          <p className="text-slate-600 text-sm md:text-base animate__animated animate__fadeIn animate__delay-1.5s">
             with expert installation and preventive maintenance services,
           </p>
-          <p className="text-slate-600 text-sm md:text-base">
+          <p className="text-slate-600 text-sm md:text-base animate__animated animate__fadeIn animate__delay-2s">
             ensuring efficient and reliable support for all client needs.
           </p>
         </div>
 
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 ml-10 md:px-8">
-          <div className="mb-6 shadow-md  overflow-hidden">
+          <div className="mb-6 shadow-md overflow-hidden transform transition-all duration-500 hover:scale-105 animate__animated animate__fadeIn animate__delay-2.5s">
             <Image
               src="/camera.png"
               alt="Main System Equipment"
@@ -44,7 +44,7 @@ const Mainsystem = () => {
             </div>
           </div>
 
-          <div className="mb-6  shadow-md  overflow-hidden">
+          <div className="mb-6 shadow-md overflow-hidden transform transition-all duration-500 hover:scale-105 animate__animated animate__fadeIn animate__delay-3s">
             <Image
               src="/installation.png"
               alt="Installation Services"
@@ -63,7 +63,7 @@ const Mainsystem = () => {
             </div>
           </div>
 
-          <div className="mb-6  shadow-md  overflow-hidden">
+          <div className="mb-6 shadow-md overflow-hidden transform transition-all duration-500 hover:scale-105 animate__animated animate__fadeIn animate__delay-3.5s">
             <Image
               src="/maint.png"
               alt="Preventive Maintenance and Repair Services"

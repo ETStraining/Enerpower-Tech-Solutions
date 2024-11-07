@@ -1,67 +1,60 @@
-"use client"
+"use client";
 
-import Container from "@/components/container"
-import Footer from "@/components/footer"
-import Image from "next/image"
+import Container from "@/components/container";
+import Image from "next/image";
 
 export default function SecuritySystem() {
     return (
-        <>
-            <div className="relative mt-20"
-            >
-                <Image
-                    src="/camera.jpg"
-                    alt="camera"
-                    width={400}
-                    height={400}
-                    className="absolute inset-0 w-full h-[45vh]"
-                />
-                <div className="absolute inset-0 bg-black opacity-60" />
-                <div className="flex items-center justify-center flex-col text-white z-10 relative h-[45vh] gap-7 md:gap-20 px-6">
-                    <h2 className="text-2xl md:text-5xl text-center xl:text-7xl">security system</h2>
-                    <p className="lg:w-[40vw] text-center lg:font-medium text-md md:text-xl xl:text-3xl xl:w-[60vw]">
-                        we provide comprehensive security solutions to ensure the safety
-                        and protection of your business and assets.
+        <Container>
+            <div className="flex flex-col lg:flex-row mt-20 gap-8 px-6 items-start">
+                {/* Left Image Section */}
+                <div className="flex flex-col items-center lg:w-1/2 space-y-6 animate__animated animate__fadeInLeft animate__delay-1s">
+                    {/* Main Camera Image */}
+                    <div className="w-full animate__animated animate__fadeInUp animate__delay-2s">
+                        <Image
+                            src="/camera.jpg"
+                            alt="camera"
+                            width={400}
+                            height={300}
+                            className="w-full h-auto object-cover rounded-lg shadow-lg"
+                        />
+                    </div>
+                    {/* Device Diagram Image */}
+                    <div className="w-full animate__animated animate__fadeInUp animate__delay-3s">
+                        <Image
+                            src="/security.png"
+                            alt="Devices Diagram"
+                            width={400}
+                            height={300}
+                            className="w-full h-auto object-cover rounded-lg shadow-lg"
+                        />
+                    </div>
+                </div>
+
+                {/* Right Text Content */}
+                <div className="lg:w-1/2 animate__animated animate__fadeInRight animate__delay-2s">
+                    <h2 className="text-blue-600 text-xl md:text-2xl pt-4 md:pt-8 font-bold mb-4">
+                        Security System
+                    </h2>
+                    <ul className="list-disc space-y-4 text-lg text-gray-700 ml-4">
+                        <li>
+                            <b>Cameras:</b> Installation of advanced CCTV and surveillance systems to monitor and record activities for enhanced security.
+                        </li>
+                        <li>
+                            <b>Access Control:</b> Implementing state-of-the-art access control systems to regulate and secure entry points within your premises.
+                        </li>
+                        <li>
+                            <b>Fire Alarm Devices:</b> Installing reliable fire detection and alarm systems to provide timely alerts and safeguard against fire hazards.
+                        </li>
+                        <li>
+                            <b>Intrusion Devices:</b> Offering a range of intrusion detection systems to prevent unauthorized access and enhance security measures.
+                        </li>
+                    </ul>
+                    <p className="text-lg mt-4 text-gray-700">
+                        Our security systems are designed to offer peace of mind, providing robust protection and monitoring for your business environment.
                     </p>
                 </div>
             </div>
-            <Container>
-                <div className="mt-12 px-6">
-                    <h1 className="mb-6 text-2xl font-semibold">Our services in this department include:</h1>
-                    <ul className="list-disc text-lg">
-
-                        <li className="py-2">
-                            <b>Camera:</b>&nbsp;
-                            Installation of advanced CCTV and surveillance systems to
-                            monitor and record activities for enhanced security.
-                        </li>
-
-                        <li className="pb-2">
-                            <b>Access control:</b>&nbsp;
-                            Implementing state-of-the-art access control systems to regulate and
-                            secure entry points within your premises.
-                        </li>
-
-                        <li className="pb-2">
-                            <b>Fire alarm device:</b>&nbsp;
-                            Installing reliable fire detection and alarm systems to
-                            provide timely alerts and safeguard against fire hazards.
-
-                        </li>
-
-                        <li className="pb-2">
-                            <b>Intrusion devices:</b>&nbsp;
-                            Offering a range of intrusion detection systems to prevent
-                            unauthorized access and enhance security measures.
-                        </li>
-                    </ul>
-                    <p className="text-lg">
-                        Our security systems are designed to offer peace of mind, providing robust protection and
-                        monitoring for your business environment.
-                    </p>
-                </div>
-              
-            </Container>
-        </>
-    )
+        </Container>
+    );
 }
