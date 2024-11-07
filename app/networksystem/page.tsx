@@ -43,7 +43,7 @@ const NetworkingServices: React.FC = () => {
           
           <div className="w-full md:w-1/2 flex justify-center md:justify-end mt-6 md:mt-10 px-2 md:px-4">
             <Image
-              src="/networkservice.png" 
+              src="/Imagenetworknew.png" 
               alt="Networking and Installation Services"
               width={400} 
               height={550}
