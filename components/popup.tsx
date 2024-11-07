@@ -49,7 +49,7 @@ const popupStyles: CSSProperties = {
   borderRadius: '12px',
   boxShadow: '0 8px 16px rgba(0, 0, 0, 0.3)',
   zIndex: 1000,
-  fontFamily: 'Arial, sans-serif', // Default fallback font
+  fontFamily: 'Arial, sans-serif', 
 };
 
 const contentStyles: CSSProperties = {
@@ -60,7 +60,7 @@ const contentStyles: CSSProperties = {
 
 const textStyles: CSSProperties = {
   fontSize: '16px',
-  fontFamily: "'Dancing Script', cursive", // Handwriting font
+  fontFamily: "'Dancing Script', cursive", 
   color: '#333',
   margin: '10px 0 5px 0',
   textAlign: 'center',
