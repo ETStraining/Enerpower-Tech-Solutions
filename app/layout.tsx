@@ -1,7 +1,8 @@
 import React from "react";
 import type { Metadata } from "next";
 import Navbar from "@/components/navbar";
-import Footer from '@/components/footer'
+import Footer from '@/components/footer';
+import NotificationPopup from "@/components/popup";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 
@@ -37,15 +38,18 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${poppins.className} antialiased`}
-      style={{ backgroundColor: "white"}}>
+      <body
+        className={`${poppins.className} antialiased`}
+        style={{ fontSize: "15px", backgroundColor: "white" }} /* Ensure same font size */
+      >
         <header>
           <Navbar />
         </header>
+        <NotificationPopup />
         <main>
           {children}
         </main>
-     <Footer/>
+        <Footer />
       </body>
     </html>
   );

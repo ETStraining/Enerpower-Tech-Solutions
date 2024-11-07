@@ -6,7 +6,7 @@ const ElectricalSystem: React.FC = () => {
     <div className="flex justify-center">
       <Container>
         <div className="flex flex-col md:flex-row-reverse py-8 px-4 items-center space-y-6 md:space-y-0">
-          <div className="flex-1 md:pl-8 text-left">
+          <div className="flex-1 md:pl-8 text-left animate__animated animate__fadeIn animate__delay-1s">
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-blue-500">
               ELECTRICAL SYSTEM
             </h1>
@@ -21,7 +21,7 @@ const ElectricalSystem: React.FC = () => {
 
           <div className="flex-1 w-full max-w-md md:max-w-full">
             <div
-              className="relative rounded-lg overflow-hidden mt-10 sm:mt-14 md:mt-20 w-full h-52 sm:h-64 md:h-80 lg:h-96"
+              className="relative rounded-lg overflow-hidden mt-10 sm:mt-14 md:mt-20 w-full h-52 sm:h-64 md:h-80 lg:h-96 transform transition-all duration-500 ease-in-out hover:scale-105"
               style={{
                 backgroundImage: 'url("/electrical.png")',
                 backgroundSize: 'cover',
@@ -34,7 +34,7 @@ const ElectricalSystem: React.FC = () => {
         </div>
 
         <div className="flex flex-col md:flex-row py-8 px-4 items-center space-y-6 md:space-y-0">
-          <div className="flex-1 md:pr-8 text-left">
+          <div className="flex-1 md:pr-8 text-left animate__animated animate__fadeIn animate__delay-2s">
             <ul className="text-base sm:text-lg md:text-xl text-gray-700 space-y-4">
               <li>
                 <b>• Switch gears:</b> Offering high-quality switch gears to manage electrical power flow and safeguard your system.
@@ -53,7 +53,7 @@ const ElectricalSystem: React.FC = () => {
 
           <div className="flex-1 w-full max-w-md md:max-w-full">
             <div
-              className="relative rounded-lg overflow-hidden w-full h-52 sm:h-64 md:h-80 lg:h-96"
+              className="relative rounded-lg overflow-hidden w-full h-52 sm:h-64 md:h-80 lg:h-96 transform transition-all duration-500 ease-in-out hover:scale-105"
               style={{
                 backgroundImage: 'url("installation.png")',
                 backgroundSize: 'cover',
