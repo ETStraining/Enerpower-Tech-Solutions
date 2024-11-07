@@ -45,7 +45,7 @@ const Contact = () => {
                     </div>
 
                      
-                    <div className="flex-1 w-full bg-blue-500 bg-opacity-50 text-white p-6 rounded-lg rounded-tl-[50px] shadow-lg lg:-ml-32 mt-8 lg:mt-0">
+                    <div className="flex-1 w-full bg-blue-600 bg-opacity-50 text-white p-6 rounded-lg rounded-tl-[50px] shadow-lg lg:-ml-32 mt-8 lg:mt-0">
                         <h1 className="text-3xl sm:text-2xl font-bold  ">Connect With Us </h1>
                         <h1 className="text-3xl sm:text-2xl font-bold mb-5  ">Today!</h1>
                         
@@ -116,7 +116,7 @@ const Contact = () => {
                 </div>
             </div>
 
-            <Footer />
+       
         </>
     );
 };

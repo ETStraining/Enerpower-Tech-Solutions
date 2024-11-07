@@ -105,7 +105,7 @@ const Navbar = () => {
 
           <Link href="/contact" className="hover:text-yellow-400 font-bold transition-colors px-4">CONTACT US</Link>
 
-          <Link href="/" className="hover:text-yellow-400 font-bold transition-colors px-4">APPLY</Link>
+        
         </div>
       </div>
 
