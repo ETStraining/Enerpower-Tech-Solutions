@@ -12,7 +12,6 @@ export default function Home() {
         <Mission/>
         <About />
         <Contact/>
-        <Footer />
     </div>
   );
 }
