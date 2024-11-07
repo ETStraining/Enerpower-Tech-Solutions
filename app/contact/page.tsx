@@ -1,9 +1,10 @@
 import Footer from "@/components/footer";
 import Image from "next/image";
+import Container from "@/components/container";
 
 const Contact = () => {
     return (
-        <>
+        <Container>
             <div className="relative">
                
                 <Image
@@ -58,8 +59,8 @@ const Contact = () => {
                                 <label className="text-sm font-medium">Company</label>
                                 <input
                                     type="text"
-                                    placeholder="Company"
-                                    className="p-3 w-full rounded-md outline-none"
+                                    placeholder="Your company"
+                                    className="p-2 w-full rounded-md outline-none"
                                 />
                             </div>
                             <div className="flex flex-col gap-2">
@@ -67,7 +68,7 @@ const Contact = () => {
                                 <input
                                     type="text"
                                     placeholder=" Enter Your Name"
-                                    className="p-3 w-full  rounded-md outline-none mb-2"
+                                    className="p-2 w-full  rounded-md outline-none mb-2"
                                 />
                                 
                             </div>
@@ -80,7 +81,7 @@ const Contact = () => {
                                 <input
                                     type="text"
                                     placeholder="Phone Number"
-                                    className="p-3 w-full  rounded-md outline-none"
+                                    className="p-2 w-full  rounded-md outline-none"
                                 />
                             </div>
                             <div className="flex flex-col gap-2">
@@ -88,17 +89,17 @@ const Contact = () => {
                                 <input
                                     type="email"
                                     placeholder="Email"
-                                    className="p-3 w-full  rounded-md outline-none"
+                                    className="p-2 w-full  rounded-md outline-none"
                                 />
                             </div>
                             </div>
                             <div className="flex flex-col gap-2">
                                 <label className="text-sm font-medium">Message</label>
-                                <input
-                                    type="text"
-                                    placeholder="Enter the message"
-                                    className="p-3 w-full rounded-md outline-none mb-2"
-                                />
+                                <textarea
+                            name="message"
+                            className="p-3 h-20 md:w-[32rem] 2xl:w-[32rem] lg:w-full  rounded-md border-[#444f80] shadow-lg text-[#19213d] outline-none">
+
+                        </textarea>
                             </div>
                             <div className="flex  gap-1">
                                 <input type="checkbox" className="form-checkbox text-blue-500 " />
@@ -109,15 +110,16 @@ const Contact = () => {
                             <div>
                             <p className="text-sm  ml-4 font-bold">Privacy Policy</p></div>
                             <button className="w-20 bg-gradient-to-r from-blue-500 via-indigo-500 to-yellow-500 text-white py-3 rounded-md font-bold hover:bg-blue-600 transition">
-                                GET IN
+                               SEND
                             </button>
                         </form>
                     </div>
                 </div>
             </div>
+            
 
             <Footer />
-        </>
+        </ Container>
     );
 };
 
