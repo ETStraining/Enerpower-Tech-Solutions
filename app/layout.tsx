@@ -40,7 +40,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${poppins.className} antialiased`}
-        style={{ fontSize: "15px", backgroundColor: "white" }} /* Ensure same font size */
+        style={{ fontSize: "15px", backgroundColor: "white" }} 
       >
         <header>
           <Navbar />
