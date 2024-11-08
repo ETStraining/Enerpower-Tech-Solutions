@@ -29,10 +29,10 @@ export default function Footer() {
                 <div className="flex flex-col gap-7">
                     <h2 className="font-semibold 2xl:text-3xl 2xl:pb-5">SERVICES</h2>
                     <div className="flex flex-col gap-5">
-                        <Link href={"/"}>Main Services</Link>
-                        <Link href={"/"}>Electrical System</Link>
-                        <Link href={"/"}>Networking System</Link>
-                        <Link href={"/"}>Security System</Link>
+                        <Link href={"/mainservices"}>Main Services</Link>
+                        <Link href={"/electronical"}>Electrical System</Link>
+                        <Link href={"/networksystem"}>Networking System</Link>
+                        <Link href={"/security"}>Security System</Link>
                     </div>
                 </div>
             </div>
