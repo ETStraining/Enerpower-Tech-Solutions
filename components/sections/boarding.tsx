@@ -2,40 +2,29 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Container from '@/components/container';
+import { Slides } from '@/utils/dammyDate';
 
-const slides = [
-  {
-    image: "/background.png",
-    description: "Technology Design Build & Customer Experience Experts."
-  },
-  {
-    image: "/4 1.png",
-    description: "Networking And CCTV SYSTEM."
-  },
-  {
-    image: "/electrical.png",
-    description: "Electronical System."
-  }
-];
+
+
 
 const Boarding: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
-    }, 5000); // Slide changes every 5 seconds
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % Slides.length);
+    }, 5000); 
 
     return () => clearInterval(interval);
   }, []);
 
   return (
     <Container>
-      <div className="relative flex flex-col w-full mt-24" style={{ height: '600px' }}>
+      <div className="relative flex flex-col w-full h-screen">
         {/* Background Image */}
         <div className="absolute inset-0 transition-transform duration-1000 ease-in-out">
           <Image
-            src={slides[currentIndex].image}
+            src={Slides[currentIndex].image}
             alt="background image"
             fill
             className="object-cover"
@@ -44,26 +33,15 @@ const Boarding: React.FC = () => {
         </div>
 
         {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-black opacity-50" />
+        <div className="absolute inset-0 bg-[#00030C] opacity-60" />
 
         {/* Slide Description */}
-        <div className="relative flex justify-center items-center w-full h-full z-10">
-          <h2
-            className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-white w-[80vw] text-center"
-            style={{
-              fontFamily: 'Poppins, sans-serif',
-              backgroundColor: 'white',
-              backgroundImage: "url('/est.png')",
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              position: 'relative',
-              WebkitFontSmoothing: 'antialiased',
-            }}
+        <div className="relative flex justify-center items-center md:w-[1053px] mx-auto h-full z-10">
+          <div
+            className=" md:text-[64px] font-bold text-white text-center"
           >
-            {slides[currentIndex].description}
-          </h2>
+            {Slides[currentIndex].description}
+          </div>
         </div>
       </div>
     </Container>
