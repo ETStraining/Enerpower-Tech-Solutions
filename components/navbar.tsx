@@ -96,8 +96,8 @@ const Navbar = () => {
                 <Link href="/tech" className="flex items-center px-4 py-2 hover:bg-gray-100 rounded font-bold transition-colors" onClick={() => setIsTechnologiesDropdownOpen(false)}>
                   Trainings & positions 
                 </Link>
-                <Link href="/tech-2" className="flex items-center px-4 py-2 hover:bg-gray-100 rounded font-bold transition-colors" onClick={() => setIsTechnologiesDropdownOpen(false)}>
-                  Tech 2
+                <Link href="/technology" className="flex items-center px-4 py-2 hover:bg-gray-100 rounded font-bold transition-colors" onClick={() => setIsTechnologiesDropdownOpen(false)}>
+                  what we offer 
                 </Link>
               </div>
             )}
@@ -133,8 +133,8 @@ const Navbar = () => {
             </button>
             {isMobileTechnologiesDropdownOpen && (
               <div className="flex flex-col space-y-2 pl-4">
-                <Link href="/tech" className="py-2 hover:text-yellow-400 font-bold" onClick={() => { setIsMobileTechnologiesDropdownOpen(false); setIsMobileMenuOpen(false); }}>Tech 1</Link>
-                <Link href="/tech-2" className="py-2 hover:text-yellow-400 font-bold" onClick={() => { setIsMobileTechnologiesDropdownOpen(false); setIsMobileMenuOpen(false); }}>Tech 2</Link>
+                <Link href="/tech" className="py-2 hover:text-yellow-400 font-bold" onClick={() => { setIsMobileTechnologiesDropdownOpen(false); setIsMobileMenuOpen(false); }}>Training & positions</Link>
+                <Link href="/technology" className="py-2 hover:text-yellow-400 font-bold" onClick={() => { setIsMobileTechnologiesDropdownOpen(false); setIsMobileMenuOpen(false); }}> what we offer </Link>
               </div>
             )}
 
