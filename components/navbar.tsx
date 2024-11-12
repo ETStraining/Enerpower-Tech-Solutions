@@ -36,8 +36,8 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 w-full bg-white shadow-md z-50">
-      <div className="flex justify-between px-3 md:px-16 h-16 items-center 2xl:px-36">
+    <nav className="fixed top-0 left-0 w-full bg-white shadow-md  z-50">
+      <div className="flex justify-between  md:px-16 md:py-[18px] py-6 items-center px-8">
         <div className="flex items-center">
           <Image
             src="/images/logo.svg"
@@ -50,33 +50,43 @@ const Navbar = () => {
 
         <div className="md:hidden">
           <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="lg:text-xl">
-            <FontAwesomeIcon icon={isMobileMenuOpen ? faTimes : faBars} fontSize={30} />
+            <button >
+              <svg
+                viewBox="0 0 512 512"
+                fill="black"
+                height="2.3em"
+                width="2.3em"
+              >
+                <path d="M0 96c0-17.7 14.3-32 32-32h384c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zm64 160c0-17.7 14.3-32 32-32h384c17.7 0 32 14.3 32 32s-14.3 32-32 32H96c-17.7 0-32-14.3-32-32zm384 160c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32h384c17.7 0 32 14.3 32 32z" />
+              </svg>
+
+            </button>
           </button>
         </div>
 
-        <div className={`hidden md:flex items-center text-blue-950 md:text-sm xl:gap-20 2xl:text-md 2xl:gap-10`}>
-          <Link href="/" className="hover:text-yellow-400 font-bold transition-colors lg:px-4">ABOUT US</Link>
+        <div className={`hidden md:flex items-center text-blue-950 xl:gap-[30px] 2xl:gap-10`}>
+          <Link href="/" className="hover:text-yellow-400 font-light lg:px-4 text-[15px]">ABOUT US</Link>
 
           <div className="relative">
             <button
               onClick={handleServicesClick}
-              className="dropdown-button hover:text-yellow-400 flex items-center space-x-3 font-bold transition-colors px-4"
+              className="dropdown-button hover:text-yellow-400 flex items-center space-x-3 font-light text-[15px] transition-colors px-4"
             >
               <span>SERVICES</span>
               <FontAwesomeIcon icon={faCaretDown} />
             </button>
             {isServicesDropdownOpen && (
-              <div className="absolute bg-white text-black mt-2 rounded-lg shadow-lg w-48 p-2">
-                <Link href="/mainservices" className="flex items-center px-4 py-2 hover:bg-gray-100 rounded font-bold transition-colors">
+              <div className="absolute bg-white text-black mt-2 rounded-lg shadow-lg w-96 p-2">
+                <Link href="/mainservices" className="flex items-center px-4 py-2 hover:bg-gray-100 rounded font-light text-[15px]  transition-colors">
                   <span>Main system</span>
                 </Link>
-                <Link href="/networksystem" className="flex items-center px-4 py-2 hover:bg-gray-100 rounded font-bold transition-colors" onClick={() => setIsServicesDropdownOpen(false)}>
+                <Link href="/networksystem" className="flex items-center px-4 py-2 hover:bg-gray-100 rounded font-light text-[15px] transition-colors" onClick={() => setIsServicesDropdownOpen(false)}>
                   Networking system
                 </Link>
-                <Link href="/electronical" className="flex items-center px-4 py-2 hover:bg-gray-100 rounded font-bold transition-colors" onClick={() => setIsServicesDropdownOpen(false)}>
+                <Link href="/electronical" className="flex items-center px-4 py-2 hover:bg-gray-100 rounded font-light text-[15px] transition-colors" onClick={() => setIsServicesDropdownOpen(false)}>
                   Electrical system
                 </Link>
-                <Link href="/security" className="flex items-center px-4 py-2 hover:bg-gray-100 rounded font-bold transition-colors" onClick={() => setIsServicesDropdownOpen(false)}>
+                <Link href="/security" className="flex items-center px-4 py-2 hover:bg-gray-100 rounded font-light text-[15px] transition-colors" onClick={() => setIsServicesDropdownOpen(false)}>
                   Security system
                 </Link>
               </div>
@@ -86,48 +96,49 @@ const Navbar = () => {
           <div className="relative">
             <button
               onClick={handleTechnologiesClick}
-              className="dropdown-button hover:text-yellow-400 flex items-center font-bold transition-colors px-4"
+              className="dropdown-button hover:text-yellow-400 flex items-center font-light text-[15px] transition-colors px-4"
             >
               <span className="mr-3">TECHNOLOGY</span>
               <FontAwesomeIcon icon={faCaretDown} />
             </button>
             {isTechnologiesDropdownOpen && (
               <div className="dropdown-content absolute bg-white text-black mt-6 rounded-lg shadow-lg w-40 p-2 z-10">
-                <Link href="/tech" className="flex items-center px-4 py-2 hover:bg-gray-100 rounded font-bold transition-colors" onClick={() => setIsTechnologiesDropdownOpen(false)}>
-                  Trainings & positions 
+                <Link href="/tech" className="flex items-center px-4 py-2 hover:bg-gray-100 rounded font-light text-[15px] transition-colors" onClick={() => setIsTechnologiesDropdownOpen(false)}>
+                  Trainings & positions
                 </Link>
-                <Link href="/technology" className="flex items-center px-4 py-2 hover:bg-gray-100 rounded font-bold transition-colors" onClick={() => setIsTechnologiesDropdownOpen(false)}>
+                <Link href="/technology" className="flex items-center px-4 py-2 hover:bg-gray-100 rounded font-light text-[15px] transition-colors" onClick={() => setIsTechnologiesDropdownOpen(false)}>
                   what we offer 
                 </Link>
               </div>
             )}
           </div>
 
-          <Link href="/contact" className="hover:text-yellow-400 font-bold transition-colors px-4">CONTACT US</Link>
-
         
+
+
         </div>
+        <button className='md:flex hidden font-light text-[15px] transition-colors py-[15px] rounded-[12px] bg-[#136BBB] text-white px-[40px] '>  <Link href="/contact" >CONTACT US</Link></button>
       </div>
 
       {isMobileMenuOpen && (
-        <div className="md:hidden mt-4 p-4 rounded-lg shadow-lg absolute bg-white z-10 w-full flex justify-center">
-          <div className="flex flex-col space-y-2">
-            <Link href="/" className="py-2 text-center hover:text-yellow-400 font-bold" onClick={() => setIsMobileMenuOpen(false)}>ABOUT US</Link>
+        <div className="md:hidden mt-4 p-4  shadow-lg  bg-white z-10 w-full h-full flex justify-center">
+          <div className="flex flex-col ">
+            <Link href="/" className="py-2 text-center hover:text-yellow-400 font-light text-[15px]" onClick={() => setIsMobileMenuOpen(false)}>ABOUT US</Link>
 
-            <button className="py-4 text-center hover:text-yellow-400 font-bold" onClick={() => setIsMobileServicesDropdownOpen(!isMobileServicesDropdownOpen)}>
+            <button className="py-4 text-center hover:text-yellow-400 font-light text-[15px]" onClick={() => setIsMobileServicesDropdownOpen(!isMobileServicesDropdownOpen)}>
               SERVICES
               <FontAwesomeIcon icon={faCaretDown} />
             </button>
             {isMobileServicesDropdownOpen && (
               <div className="flex flex-col space-y-2 pl-4">
-                <Link href="/mainsystem" className="py-2 hover:text-yellow-400 font-bold" onClick={() => { setIsMobileServicesDropdownOpen(false); setIsMobileMenuOpen(false); }}>Main system</Link>
-                <Link href="/networksystem" className="py-2 hover:text-yellow-400 font-bold" onClick={() => { setIsMobileServicesDropdownOpen(false); setIsMobileMenuOpen(false); }}>Networking system</Link>
-                <Link href="/electronical" className="py-2 hover:text-yellow-400 font-bold" onClick={() => { setIsMobileServicesDropdownOpen(false); setIsMobileMenuOpen(false); }}>Electrical system</Link>
-                <Link href="/security" className="py-2 hover:text-yellow-400 font-bold" onClick={() => { setIsMobileServicesDropdownOpen(false); setIsMobileMenuOpen(false); }}>Security system</Link>
+                <Link href="/mainsystem" className="py-2 hover:text-yellow-400 font-light text-[15px]" onClick={() => { setIsMobileServicesDropdownOpen(false); setIsMobileMenuOpen(false); }}>Main system</Link>
+                <Link href="/networksystem" className="py-2 hover:text-yellow-400 font-light text-[15px]" onClick={() => { setIsMobileServicesDropdownOpen(false); setIsMobileMenuOpen(false); }}>Networking system</Link>
+                <Link href="/electronical" className="py-2 hover:text-yellow-400 font-light text-[15px]" onClick={() => { setIsMobileServicesDropdownOpen(false); setIsMobileMenuOpen(false); }}>Electrical system</Link>
+                <Link href="/security" className="py-2 hover:text-yellow-400 font-light text-[15px]" onClick={() => { setIsMobileServicesDropdownOpen(false); setIsMobileMenuOpen(false); }}>Security system</Link>
               </div>
             )}
 
-            <button className="py-2 text-center hover:text-yellow-400 font-bold" onClick={() => setIsMobileTechnologiesDropdownOpen(!isMobileTechnologiesDropdownOpen)}>
+            <button className="py-2 text-center hover:text-yellow-400 font-light text-[15px]" onClick={() => setIsMobileTechnologiesDropdownOpen(!isMobileTechnologiesDropdownOpen)}>
               TECHNOLOGY
               <FontAwesomeIcon icon={faCaretDown} />
             </button>
@@ -138,7 +149,7 @@ const Navbar = () => {
               </div>
             )}
 
-            <Link href="/" className="py-2 text-center hover:text-yellow-400 font-bold" onClick={() => setIsMobileMenuOpen(false)}>CONTACT US</Link>
+            <Link href="/" className="py-2 text-center hover:text-yellow-400 font-light text-[15px]" onClick={() => setIsMobileMenuOpen(false)}>CONTACT US</Link>
           </div>
         </div>
       )}

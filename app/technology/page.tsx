@@ -5,8 +5,8 @@ import React from "react";
 const HomePage: React.FC = () => {
   return (
     <Container>
-      {/* Added more top padding for better spacing */}
-      <div className="container mx-auto px-4 md:px-8 grid grid-cols-12 gap-8 pt-20 pb-12">
+      {/* Adjusted top padding for better spacing */}
+      <div className="container mx-auto px-4 md:px-8 grid grid-cols-12 gap-8 pt-32 pb-12">
         {/* Technologies Section */}
         <section className="col-span-12 md:col-span-8 lg:col-span-7">
           <h1 className="text-3xl font-bold mb-4 text-blue-900">Technologies</h1>
