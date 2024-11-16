@@ -20,8 +20,8 @@ const Boarding: React.FC = () => {
 
   return (
     <Container>
-      <div className="relative flex flex-col w-full h-screen mt-28">
-        {/* Background Image */}
+      <div className="relative flex flex-col w-full h-screen mt-32">
+      
         <div className="absolute inset-0 transition-transform duration-1000 ease-in-out">
           <Image
             src={Slides[currentIndex].image}
