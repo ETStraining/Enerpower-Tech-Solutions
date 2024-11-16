@@ -3,7 +3,7 @@ import Container from '@/components/container';
 
 const ElectricalSystem: React.FC = () => {
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-center mt-20"> {/* Added mt-16 for spacing */}
       <Container>
         <div className="flex flex-col md:flex-row-reverse py-8 px-4 items-center space-y-6 md:space-y-0">
           <div className="flex-1 md:pl-8 text-left animate__animated animate__fadeIn animate__delay-1s">
