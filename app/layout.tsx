@@ -38,8 +38,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${poppins.className} antialiased`}
-      style={{ backgroundColor: "white"}}>
+      <body
+        className={`${poppins.className} antialiased`}
+        style={{ fontSize: "15px", backgroundColor: "white" }} 
+      >
         <header>
           <Navbar />
         </header>
@@ -47,7 +49,7 @@ export default function RootLayout({
         <main>
           {children}
         </main>
-     <Footer/>
+        <Footer />
       </body>
     </html>
   );

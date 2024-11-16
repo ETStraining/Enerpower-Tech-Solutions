@@ -1,44 +1,72 @@
-import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+"use client";
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
+import Container from '@/components/container';
+
+const slides = [
+  {
+    image: "/background.png",
+    description: "Technology Design Build & Customer Experience Experts."
+  },
+  {
+    image: "/4 1.png",
+    description: "Networking And CCTV SYSTEM."
+  },
+  {
+    image: "/electrical.png",
+    description: "Electronical System."
+  }
+];
 
 const Boarding: React.FC = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
+    }, 5000); // Slide changes every 5 seconds
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <div className="relative flex flex-col w-full">
-      <Image
-        src={"/background.png"}
-        alt='background image'
-        width={400}
-        height={400}
-        className='w-full absolute h-[80vh] mb-20'
-      />
-      <div className="absolute inset-0 bg-black opacity-30 h-[80vh]" />
-      <div className="relative flex flex-col justify-center items-center w-full p-4 h-[80vh]">
-        <h2
-          className="text-xl uppercase sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl mb-4 font-bold text-black dark:text-transparent z-10"
-          style={{
-            backgroundColor: "white",
-            backgroundImage: "url('/est.png')",
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            WebkitBackgroundClip: 'text',
-            WebkitTextFillColor: 'transparent',
-            position: 'relative',
-            WebkitFontSmoothing: 'antialiased',
-          }}
-        >
-          Technology Design Build & <br/> Customer Experience  Experts.
-        </h2>
-        <button
-            className="flex items-center bg-blue-500 text-white font-semibold rounded-lg mt-6 z-10"
-            style={{ height: '48px', width: '160px', fontSize: '14px' }}
+    <Container>
+      <div className="relative flex flex-col w-full mt-24" style={{ height: '600px' }}>
+        {/* Background Image */}
+        <div className="absolute inset-0 transition-transform duration-1000 ease-in-out">
+          <Image
+            src={slides[currentIndex].image}
+            alt="background image"
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
+
+        {/* Dark Overlay */}
+        <div className="absolute inset-0 bg-black opacity-50" />
+
+        {/* Slide Description */}
+        <div className="relative flex justify-center items-center w-full h-full z-10">
+          <h2
+            className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-white w-[80vw] text-center"
+            style={{
+              fontFamily: 'Poppins, sans-serif',
+              backgroundColor: 'white',
+              backgroundImage: "url('/est.png')",
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              position: 'relative',
+              WebkitFontSmoothing: 'antialiased',
+            }}
           >
-            <span className="text-xs ml-6">Build a Team</span>
-            <FontAwesomeIcon icon={faArrowRight} className="text-3xl" style={{ height: '12px', width: '24px' }} />
-          </button>
+            {slides[currentIndex].description}
+          </h2>
+        </div>
       </div>
-    </div>
+    </Container>
   );
 };
 

@@ -4,12 +4,12 @@ import Footer from '@/components/footer';
 
 const NetworkingServices: React.FC = () => {
   return (
-    <div className="flex flex-col min-h-screen ">
-      
+    <div className="flex flex-col min-h-screen">
       <div className="flex flex-col md:flex-row items-center md:items-start p-6 md:p-10 flex-grow">
         <div className="flex flex-col md:flex-row items-start justify-center w-full max-w-screen-lg mx-auto py-10 my-8 md:my-10">
           
-          <div className="w-full md:w-1/2 pr-0 md:pr-10 mb-8">
+          {/* Left Section (Text) */}
+          <div className="w-full md:w-1/2 pr-0 md:pr-10 mb-8 animate__animated animate__fadeInLeft animate__delay-1s">
             <h2 className="text-blue-600 text-xl md:text-2xl pt-4 md:pt-8 font-bold mb-4">
               NETWORKING AND INSTALLATION SERVICES
             </h2>
@@ -17,8 +17,7 @@ const NetworkingServices: React.FC = () => {
               Our Networking and Installation department is dedicated to providing cutting-edge technology solutions to meet your business needs.
             </p>
 
-            
-            <div className="bg-blue-100 p-4 md:p-6 lg:p-10 w-full md:w-[502px] h-auto md:h-[700px] rounded-lg flex flex-col items-start">
+            <div className="bg-blue-100 p-4 md:p-6 lg:p-10 w-full md:w-[502px] h-auto md:h-[700px] rounded-lg flex flex-col items-start animate__animated animate__fadeInUp animate__delay-2s">
               <h3 className="text-gray-700 text-lg md:text-xl font-semibold mb-4 pb-6 md:pb-10">Our expertise includes:</h3>
               <ul className="list-disc list-inside space-y-3 text-gray-700 text-sm md:text-base">
                 <li>
@@ -40,10 +39,10 @@ const NetworkingServices: React.FC = () => {
             </div>
           </div>
 
-          
-          <div className="w-full md:w-1/2 flex justify-center md:justify-end mt-6 md:mt-10 px-2 md:px-4">
+          {/* Right Section (Image) */}
+          <div className="w-full md:w-1/2 flex justify-center md:justify-end mt-6 md:mt-10 px-2 md:px-4 animate__animated animate__fadeInRight animate__delay-2s">
             <Image
-              src="/networkservice.png" 
+              src="/Imagenetworknew.png" 
               alt="Networking and Installation Services"
               width={400} 
               height={550}
@@ -53,8 +52,6 @@ const NetworkingServices: React.FC = () => {
 
         </div>
       </div>
-
-
     </div>
   );
 };
