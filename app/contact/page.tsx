@@ -5,7 +5,7 @@ import Container from "@/components/container";
 const Contact = () => {
     return (
         <Container>
-            <div className="relative">
+            <div className="relative py-16">
                
                 <Image
                     src="/contact.png"
@@ -97,6 +97,7 @@ const Contact = () => {
                                 <label className="text-sm font-medium">Message</label>
                                 <textarea
                             name="message"
+                             placeholder="What would like to tell us?"
                             className="p-3 h-20 md:w-[32rem] 2xl:w-[32rem] lg:w-full  rounded-md border-[#444f80] shadow-lg text-[#19213d] outline-none">
 
                         </textarea>

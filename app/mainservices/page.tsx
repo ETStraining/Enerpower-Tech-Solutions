@@ -4,7 +4,7 @@ import Footer from '@/components/footer';
 const Mainsystem = () => {
   return (
     <>
-      <div className="px-4 md:px-8 lg:px-16">
+      <div className="px-4 md:px-8 lg:px-16 py-16">
         <div className="py-12 md:py-20 md:ml-0 lg:ml-20">
           <h1 className="text-blue-600 text-xl md:text-2xl pt-4 md:pt-8 font-bold mb-4 animate__animated animate__fadeIn">
             MAIN SYSTEM
