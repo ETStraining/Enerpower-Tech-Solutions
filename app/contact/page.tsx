@@ -5,9 +5,7 @@ import { useState } from "react";
 
 // Define the shape of formData and error state
 interface FormData {
-  company: string;
   name: string;
-  phone: string;
   email: string;
   message: string;
   form?: string; 
@@ -15,9 +13,7 @@ interface FormData {
 
 const Contact = () => {
   const [formData, setFormData] = useState<FormData>({
-    company: "",
     name: "",
-    phone: "",
     email: "",
     message: "",
   });
@@ -33,15 +29,8 @@ const Contact = () => {
 
   const validateForm = () => {
     const newErrors: Partial<FormData> = {};
-
-    if (!formData.company.trim()) {
-      newErrors.company = "Company name is required";
-    }
     if (!formData.name.trim()) {
       newErrors.name = "Name is required";
-    }
-    if (!formData.phone.trim()) {
-      newErrors.phone = "Phone number is required";
     }
     if (!formData.email.trim()) {
       newErrors.email = "Email is required";
@@ -74,9 +63,7 @@ const Contact = () => {
         if (response.ok) {
           setSuccessMessage("Thank you for contacting us! We'll get back to you shortly.");
           setFormData({
-            company: "",
             name: "",
-            phone: "",
             email: "",
             message: "",
           });
@@ -128,7 +115,7 @@ const Contact = () => {
             />
           </div>
 
-          <div className="flex-1 w-full bg-blue-600 bg-opacity-50 text-white p-6 rounded-lg rounded-tl-[50px] shadow-lg lg:-ml-32 mt-8 lg:mt-0">
+          <div className="flex-1 w-full bg-blue-600 bg-opacity-50 text-white p-6 rounded-lg rounded-tl-[50px] shadow-lg lg:-ml-32 mt-8 lg:mt-0 relative">
             <h1 className="text-3xl sm:text-2xl font-bold">Connect With Us </h1>
             <h1 className="text-3xl sm:text-2xl font-bold mb-5">Today!</h1>
 
@@ -139,12 +126,9 @@ const Contact = () => {
                   <input
                     type="text"
                     name="company"
-                    value={formData.company}
-                    onChange={handleChange}
                     placeholder="Your company"
                     className="p-2 w-full rounded-md outline-none"
                   />
-                  {errors.company && <p className="text-red-500 text-xs">{errors.company}</p>}
                 </div>
                 <div className="flex flex-col gap-2">
                   <label className="text-sm font-medium">Full Name</label>
@@ -165,12 +149,9 @@ const Contact = () => {
                   <input
                     type="text"
                     name="phone"
-                    value={formData.phone}
-                    onChange={handleChange}
                     placeholder="Phone Number"
                     className="p-2 w-full rounded-md outline-none"
                   />
-                  {errors.phone && <p className="text-red-500 text-xs">{errors.phone}</p>}
                 </div>
                 <div className="flex flex-col gap-2">
                   <label className="text-sm font-medium">Email</label>
@@ -195,8 +176,8 @@ const Contact = () => {
                 />
                 {errors.message && <p className="text-red-500 text-xs">{errors.message}</p>}
               </div>
-              {errors.form && <p className="text-red-500 text-xs">{errors.form}</p>}
-              {successMessage && <p className="text-green-500 text-xs">{successMessage}</p>}
+              {errors.form && <p className="text-red-500 text-xs absolute">{errors.form}</p>}
+              {successMessage && <p className="text-green-500 absolute bg-white w-[30vw] p-10 inset-20 h-[20vh] text-xl">{successMessage}</p>}
               <button
                 type="submit"
                 className="w-20 bg-blue-600 text-white py-3 rounded-md font-bold hover:bg-blue-400 transition"
