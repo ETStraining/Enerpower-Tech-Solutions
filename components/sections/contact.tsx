@@ -4,8 +4,10 @@ import Container from "../container";
 import Image from "next/image";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import React from "react";
 
 export default function Contact() {
+
     return (
 
         <Container>
@@ -17,7 +19,7 @@ export default function Contact() {
                     height={400}
                     className="h-[55vh] 2xl:h-[65vh]"
                 />
-                <div className="border border-gray-400 p-4 md:p-10 text-[#19213D] rounded-xl md:mx-5 lg:w-[40vw]">
+                <form className="border border-gray-400 p-4 md:p-10 text-[#19213D] rounded-xl md:mx-5 lg:w-[40vw]">
                     <div className="flex gap-5 mb-4 flex-col md:flex-row lg:flex-col 2xl:flex-row">
                         <div className="flex flex-col gap-2">
                             <label htmlFor="name" className="font-semibold text-lg">Name:</label>
@@ -76,7 +78,7 @@ export default function Contact() {
                         <FontAwesomeIcon icon={faArrowRight} className="text-3xl" style={{ height: '12px', width: '24px' }} />
                     </button>
 
-                </div>
+                </form>
             </div>
         </Container>
     )
